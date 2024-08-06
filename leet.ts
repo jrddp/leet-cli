@@ -13,14 +13,15 @@ type Problem = {
 async function readProblems(): Promise<Problem[]> {
   const content = await fs.readFile('problems.csv', 'utf-8');
   const lines = content.trim().split('\n');
-  return lines.map(line => {
+  return lines.slice(1).map(line => {
     const [isComplete, link, category] = line.split(',');
-    return { isComplete: isComplete === 'true', link, category };
+    return { isComplete: isComplete === '1', link, category };
   });
 }
 
 async function writeProblems(problems: Problem[]): Promise<void> {
-  const content = problems.map(p => `${p.isComplete},${p.link},${p.category}`).join('\n');
+  const header = 'isComplete,link,category';
+  const content = [header, ...problems.map(p => `${p.isComplete ? '1' : '0'},${p.link},${p.category}`)].join('\n');
   await fs.writeFile('problems.csv', content);
 }
 
@@ -67,25 +68,46 @@ async function listProblemsByCategory(problems: Problem[]): Promise<void> {
     }
 
     const categoryProblems = problems.filter(p => p.category === categoryChoice);
-    const incompleteProblems = categoryProblems.filter(p => !p.isComplete);
-    const completeProblems = categoryProblems.filter(p => p.isComplete);
     const randomIncompleteIndex = getRandomIncompleteIndex(categoryProblems);
 
-    note(chalk.bold(`${categoryChoice} (${stats[categoryChoice as string].completed}/${stats[categoryChoice as string].total}, ${(stats[categoryChoice as string].completed / stats[categoryChoice as string].total * 100).toFixed(1)}%)`));
+    while (true) {
+      note(chalk.bold(`${categoryChoice} (${stats[categoryChoice as string].completed}/${stats[categoryChoice as string].total}, ${(stats[categoryChoice as string].completed / stats[categoryChoice as string].total * 100).toFixed(1)}%)`));
 
-    for (const [index, problem] of incompleteProblems.entries()) {
-      const isRandom = index === randomIncompleteIndex;
-      console.log(isRandom ? chalk.bgYellow.black(`➤ ${problem.link}`) : `  ${problem.link}`);
+      const sortedProblems = [
+        ...categoryProblems.filter(p => !p.isComplete),
+        ...categoryProblems.filter(p => p.isComplete)
+      ];
+
+      const problemOptions = [
+        { value: 'back', label: 'Go back to categories' },
+        ...sortedProblems.map((problem, index) => ({
+          value: categoryProblems.indexOf(problem).toString(),
+          label: `${problem.isComplete ? chalk.dim('✓') : ' '} ${problem.link}${index === randomIncompleteIndex ? ' 🎲' : ''}`
+        }))
+      ];
+
+      const problemChoice = await select({
+        message: 'Select a problem:',
+        options: problemOptions
+      });
+
+      if (problemChoice === 'back') {
+        break;
+      }
+
+      const selectedProblem = categoryProblems[parseInt(problemChoice as string)];
+      const newStatus = await confirm({
+        message: `Set problem status (current: ${selectedProblem.isComplete ? 'complete' : 'incomplete'}):`,
+        initialValue: selectedProblem.isComplete,
+      });
+
+      if (newStatus !== selectedProblem.isComplete) {
+        selectedProblem.isComplete = newStatus;
+        await writeProblems(problems);
+        note(chalk.green(`Problem status updated to ${newStatus ? 'complete' : 'incomplete'}.`));
+        stats[categoryChoice as string].completed += newStatus ? 1 : -1;
+      }
     }
-
-    for (const problem of completeProblems) {
-      console.log(chalk.dim(`  ${problem.link} (completed)`));
-    }
-
-    await select({
-      message: 'Press Enter to go back',
-      options: [{ value: 'back', label: 'Go back' }]
-    });
   }
 }
 
@@ -111,10 +133,10 @@ async function selectRandomProblem(problems: Problem[]): Promise<void> {
     message: 'Did you complete this problem?'
   });
 
-  if (isCompleted) {
-    problems[randomIndex].isComplete = true;
+  if (isCompleted !== problem.isComplete) {
+    problem.isComplete = isCompleted;
     await writeProblems(problems);
-    note(chalk.green('Problem marked as completed and CSV file updated.'));
+    note(chalk.green(`Problem marked as ${isCompleted ? 'completed' : 'incomplete'} and CSV file updated.`));
   }
 }
 
