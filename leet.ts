@@ -1,124 +1,147 @@
-#!/usr/bin/env node
-
-import * as fs from 'fs/promises';
-import * as path from 'path';
+#!/usr/bin/env bun
+import { intro, outro, select, confirm, note } from '@clack/prompts';
 import chalk from 'chalk';
-import { intro, outro, select, confirm, spinner } from '@clack/prompts';
-import { parse } from 'csv-parse/sync';
-import { stringify } from 'csv-stringify/sync';
-import { fileURLToPath } from 'url';
+import fs from 'fs/promises';
+import path from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-interface Problem {
-  isComplete: string;
+type Problem = {
+  isComplete: boolean;
   link: string;
   category: string;
+};
+
+async function readProblems(): Promise<Problem[]> {
+  const content = await fs.readFile('problems.csv', 'utf-8');
+  const lines = content.trim().split('\n');
+  return lines.map(line => {
+    const [isComplete, link, category] = line.split(',');
+    return { isComplete: isComplete === 'true', link, category };
+  });
 }
 
-let problems: Problem[] = [];
-
-async function loadProblems(): Promise<Problem[]> {
-  const filePath = path.join(__dirname, 'problems.csv');
-  const fileContent = await fs.readFile(filePath, 'utf-8');
-  return parse(fileContent, { columns: true }) as Problem[];
+async function writeProblems(problems: Problem[]): Promise<void> {
+  const content = problems.map(p => `${p.isComplete},${p.link},${p.category}`).join('\n');
+  await fs.writeFile('problems.csv', content);
 }
 
-async function saveProblems(problems: Problem[]): Promise<void> {
-  const filePath = path.join(__dirname, 'problems.csv');
-  const csv = stringify(problems, { header: true });
-  await fs.writeFile(filePath, csv);
-}
-
-function getRandomIncompleteProblem(): Problem | null {
-  const incompleteProblems = problems.filter(p => p.isComplete === '0');
-  if (incompleteProblems.length === 0) {
-    return null;
-  }
-  const randomIndex = Math.floor(Math.random() * incompleteProblems.length);
-  return incompleteProblems[randomIndex];
-}
-
-function showIncompleteByCategory(): void {
-  const categories = [...new Set(problems.map(p => p.category))];
-  categories.forEach(category => {
-    const incompleteProblems = problems.filter(p => p.category === category && p.isComplete === '0');
-    if (incompleteProblems.length > 0) {
-      console.log(chalk.cyan(`\n${category}:`));
-      incompleteProblems.forEach(p => console.log(chalk.blue(p.link)));
+function getCategoryStats(problems: Problem[]): Record<string, { total: number; completed: number }> {
+  const stats: Record<string, { total: number; completed: number }> = {};
+  for (const problem of problems) {
+    if (!stats[problem.category]) {
+      stats[problem.category] = { total: 0, completed: 0 };
     }
-  });
+    stats[problem.category].total++;
+    if (problem.isComplete) {
+      stats[problem.category].completed++;
+    }
+  }
+  return stats;
 }
 
-function showAllIncomplete(): void {
-  const incompleteProblems = problems.filter(p => p.isComplete === '0');
-  incompleteProblems.forEach(p => {
-    console.log(chalk.cyan(`${p.category}:`), chalk.blue(p.link));
-  });
+function getRandomIncompleteIndex(problems: Problem[]): number {
+  const incompleteProblemIndices = problems
+    .map((p, index) => ({ isComplete: p.isComplete, index }))
+    .filter(p => !p.isComplete)
+    .map(p => p.index);
+  return incompleteProblemIndices[Math.floor(Math.random() * incompleteProblemIndices.length)];
 }
 
-function showCategoryStats(): void {
-  const categories = [...new Set(problems.map(p => p.category))];
-  categories.forEach(category => {
-    const categoryProblems = problems.filter(p => p.category === category);
-    const completeCount = categoryProblems.filter(p => p.isComplete === '1').length;
-    const totalCount = categoryProblems.length;
-    const percentComplete = ((completeCount / totalCount) * 100).toFixed(2);
-    console.log(chalk.cyan(`${category}:`), 
-      chalk.green(`${completeCount}/${totalCount} (${percentComplete}%)`));
+async function listProblemsByCategory(problems: Problem[]): Promise<void> {
+  const stats = getCategoryStats(problems);
+  const categories = Object.keys(stats).sort();
+
+  while (true) {
+    const categoryChoice = await select({
+      message: 'Select a category:',
+      options: [
+        { value: 'back', label: 'Go back' },
+        ...categories.map(category => ({
+          value: category,
+          label: `${category} (${stats[category].completed}/${stats[category].total}, ${(stats[category].completed / stats[category].total * 100).toFixed(1)}%)`
+        }))
+      ]
+    });
+
+    if (categoryChoice === 'back') {
+      break;
+    }
+
+    const categoryProblems = problems.filter(p => p.category === categoryChoice);
+    const incompleteProblems = categoryProblems.filter(p => !p.isComplete);
+    const completeProblems = categoryProblems.filter(p => p.isComplete);
+    const randomIncompleteIndex = getRandomIncompleteIndex(categoryProblems);
+
+    note(chalk.bold(`${categoryChoice} (${stats[categoryChoice as string].completed}/${stats[categoryChoice as string].total}, ${(stats[categoryChoice as string].completed / stats[categoryChoice as string].total * 100).toFixed(1)}%)`));
+
+    for (const [index, problem] of incompleteProblems.entries()) {
+      const isRandom = index === randomIncompleteIndex;
+      console.log(isRandom ? chalk.bgYellow.black(`➤ ${problem.link}`) : `  ${problem.link}`);
+    }
+
+    for (const problem of completeProblems) {
+      console.log(chalk.dim(`  ${problem.link} (completed)`));
+    }
+
+    await select({
+      message: 'Press Enter to go back',
+      options: [{ value: 'back', label: 'Go back' }]
+    });
+  }
+}
+
+async function selectRandomProblem(problems: Problem[]): Promise<void> {
+  const incompleteProblemIndices = problems
+    .map((p, index) => ({ isComplete: p.isComplete, index }))
+    .filter(p => !p.isComplete)
+    .map(p => p.index);
+
+  if (incompleteProblemIndices.length === 0) {
+    note(chalk.yellow('Congratulations! All problems are completed.'));
+    return;
+  }
+
+  const randomIndex = incompleteProblemIndices[Math.floor(Math.random() * incompleteProblemIndices.length)];
+  const problem = problems[randomIndex];
+  const stats = getCategoryStats(problems);
+
+  note(chalk.bold(`${problem.category} (${stats[problem.category].completed}/${stats[problem.category].total}, ${(stats[problem.category].completed / stats[problem.category].total * 100).toFixed(1)}%)`));
+  console.log(chalk.green(`Random problem: ${problem.link}`));
+
+  const isCompleted = await confirm({
+    message: 'Did you complete this problem?'
   });
+
+  if (isCompleted) {
+    problems[randomIndex].isComplete = true;
+    await writeProblems(problems);
+    note(chalk.green('Problem marked as completed and CSV file updated.'));
+  }
 }
 
 async function main() {
-  intro(chalk.bold('LeetCode Problem Tracker'));
+  intro(chalk.bold('LeetCode Problem Manager'));
 
-  const s = spinner();
-  s.start('Loading problems');
-  problems = await loadProblems();
-  s.stop('Problems loaded');
+  const problems = await readProblems();
 
   while (true) {
     const action = await select({
-      message: 'What would you like to do?',
+      message: 'Choose an action:',
       options: [
-        { value: 'random', label: 'Get random incomplete problem' },
-        { value: 'byCategory', label: 'Show incomplete by category' },
-        { value: 'allIncomplete', label: 'Show all incomplete' },
-        { value: 'stats', label: 'Show category stats' },
-        { value: 'exit', label: 'Exit' },
-      ],
-    }) as string;
+        { value: 'list', label: 'List problems by category' },
+        { value: 'random', label: 'Select random problem' },
+        { value: 'exit', label: 'Exit' }
+      ]
+    });
 
     switch (action) {
-      case 'random': {
-        const problem = getRandomIncompleteProblem();
-        if (problem) {
-          console.log(chalk.green(`Random incomplete problem: ${problem.link}`));
-          const completed = await confirm({
-            message: 'Have you completed this problem?',
-          });
-          if (completed) {
-            problem.isComplete = '1';
-            await saveProblems(problems);
-            console.log(chalk.green('Problem marked as completed!'));
-          }
-        } else {
-          console.log(chalk.yellow('All problems are completed!'));
-        }
+      case 'list':
+        await listProblemsByCategory(problems);
         break;
-      }
-      case 'byCategory':
-        showIncompleteByCategory();
-        break;
-      case 'allIncomplete':
-        showAllIncomplete();
-        break;
-      case 'stats':
-        showCategoryStats();
+      case 'random':
+        await selectRandomProblem(problems);
         break;
       case 'exit':
-        outro(chalk.yellow('Goodbye!'));
+        outro(chalk.bold('Goodbye!'));
         process.exit(0);
     }
   }
