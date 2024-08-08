@@ -12,7 +12,7 @@ function dateReviver(key, value) {
   return value;
 }
 
-let problems = JSON.parse(readFileSync("grind75.json", "utf8"), dateReviver) as Problem[];
+let problems = JSON.parse(readFileSync("/Users/jard/Scripts/leet/grind75.json", "utf8"), dateReviver) as Problem[];
 
 async function main() {
   intro(chalk.bold(chalk.green("Grind75 Manager")));
@@ -104,9 +104,8 @@ async function showProgress() {
   const earliestDate = new Date(
     problems.reduce((acc, p) => Math.min(acc, p.completionDate?.getTime() ?? Infinity), Infinity)
   );
-  const daysGoing = Math.round(
-    (new Date().getTime() - earliestDate.getTime()) / (1000 * 60 * 60 * 24)
-  ) + 1;
+  const daysGoing =
+    Math.round((new Date().getTime() - earliestDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
   const dailyAverage = (nComplete / daysGoing).toFixed(2);
 
   console.log(
