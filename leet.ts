@@ -26,6 +26,7 @@ async function main() {
         { value: "next", label: "Open next problem" },
         { value: "show_progress", label: "View progress" },
         { value: "list_category", label: "List problems by category" },
+        { value: "recent", label: "View recently completed problems" },
         { value: "exit", label: "Exit" },
       ],
     });
@@ -44,6 +45,9 @@ async function main() {
       case "list_category":
         await listProblemsByCategory();
         break;
+      case "recent":
+        await viewRecentlyCompleted();
+        break;
     }
   }
 }
@@ -61,7 +65,7 @@ type Problem = {
 
 function writeProblems(): void {
   const content = JSON.stringify(problems, null, 2);
-  writeFileSync(problemsFilePath, content);
+  writeFileSync(problemsFilePath, content, "utf8");
 }
 
 function parseTimeToSeconds(timeString: string): number {
@@ -94,9 +98,10 @@ async function nextProblem() {
       )}`,
       initialValue: "",
       validate: input => {
-        if (input === "0" || !/^\d+:\d{2}$/.test(input)) {
-          return "Please enter time in m:ss format (e.g., 5:30)";
+        if (input === "0" || /^\d+:\d{2}$/.test(input)) {
+          return;
         }
+        return "Please enter time in m:ss format (e.g., 5:30) or 0";
       },
     });
 
@@ -171,6 +176,62 @@ async function listProblemsByCategory() {}
 function renderProgressBar(nComplete: number, nTotal: number): string {
   const nLeft = nTotal - nComplete;
   return "|".repeat(nComplete) + ".".repeat(nLeft);
+}
+
+function parseExpectedTime(timeString: string): number {
+  const minutes = parseInt(timeString.split(" ")[0]);
+  return minutes * 60;
+}
+
+function formatTimeDifference(timeDiff: number): string {
+  const minutes = Math.floor(Math.abs(timeDiff) / 60);
+  const seconds = Math.abs(timeDiff) % 60;
+  const formattedTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+  return timeDiff < 0 ? `${formattedTime} fast` : `${formattedTime} slow`;
+}
+
+async function viewRecentlyCompleted() {
+  const completedProblems = problems
+    .filter(p => p.isComplete && p.completionDate)
+    .sort((a, b) => (b.completionDate?.getTime() || 0) - (a.completionDate?.getTime() || 0))
+    .slice(0, 5);
+
+  if (completedProblems.length === 0) {
+    note(chalk.yellow("No completed problems found."));
+    return;
+  }
+
+  completedProblems.forEach(problem => {
+    const difficultyColor =
+      problem.difficulty === "Easy"
+        ? chalk.green
+        : problem.difficulty === "Medium"
+        ? chalk.hex("#FFA500") // Orange
+        : chalk.red;
+
+    const expectedTime = parseExpectedTime(problem.timeExpected);
+    const timeDiff = (problem.timeTaken || 0) - expectedTime;
+    const timeDiffFormatted = formatTimeDifference(timeDiff);
+    const timeDiffColor = timeDiff < 0 ? chalk.green : chalk.red;
+
+    const daysSinceCompletion = Math.round(
+      (new Date().getTime() - (problem.completionDate?.getTime() || 0)) / (1000 * 60 * 60 * 24)
+    );
+
+    console.log(
+      `${chalk.bold(problem.name)} ${difficultyColor(problem.difficulty)} ${chalk.blue(
+        problem.category
+      )} ${chalk.yellow(`Completed: ${problem.completionDate?.toLocaleString()}`)} ${chalk.dim(
+        `(${daysSinceCompletion} days ago)`
+      )}`
+    );
+    console.log(
+      `Completed in ${
+        problem.timeTaken ? formatSecondsToTime(problem.timeTaken) : "0"
+      } ${timeDiffColor(`(${timeDiffFormatted})`)}`
+    );
+    console.log("---");
+  });
 }
 
 main().catch(console.error);
