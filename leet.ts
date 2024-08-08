@@ -1,207 +1,127 @@
 #!/usr/bin/env bun
-import { intro, outro, select, confirm, note, isCancel } from '@clack/prompts';
-import chalk from 'chalk';
-import fs from 'fs/promises';
+import { intro, outro, select, confirm, note, isCancel, text } from "@clack/prompts";
+import chalk from "chalk";
+import { readFileSync, write, writeFileSync } from "fs";
 
-type Problem = {
-  isComplete: boolean;
-  link: string;
-  category: string;
-};
+function dateReviver(key, value) {
+  const dateFormat = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/;
 
-async function readProblems(): Promise<Problem[]> {
-  const content = await fs.readFile('/Users/jard/Scripts/leet/problems.csv', 'utf-8');
-  const lines = content.trim().split('\n');
-  return lines.slice(1).map(line => {
-    const [isComplete, link, category] = line.split(',');
-    return { isComplete: isComplete === '1', link, category };
-  });
-}
-
-async function writeProblems(problems: Problem[]): Promise<void> {
-  const header = 'isComplete,link,category';
-  const content = [header, ...problems.map(p => `${p.isComplete ? '1' : '0'},${p.link},${p.category}`)].join('\n');
-  await fs.writeFile('problems.csv', content);
-}
-
-function getCategoryStats(problems: Problem[]): Record<string, { total: number; completed: number }> {
-  const stats: Record<string, { total: number; completed: number }> = {};
-  for (const problem of problems) {
-    if (!stats[problem.category]) {
-      stats[problem.category] = { total: 0, completed: 0 };
-    }
-    stats[problem.category].total++;
-    if (problem.isComplete) {
-      stats[problem.category].completed++;
-    }
+  if (typeof value === "string" && dateFormat.test(value)) {
+    return new Date(value);
   }
-  return stats;
+  return value;
 }
 
-function getRandomIncompleteIndex(problems: Problem[]): number | null {
-  const incompleteProblemIndices = problems
-    .map((p, index) => ({ isComplete: p.isComplete, index }))
-    .filter(p => !p.isComplete)
-    .map(p => p.index);
-  return incompleteProblemIndices.length > 0
-    ? incompleteProblemIndices[Math.floor(Math.random() * incompleteProblemIndices.length)]
-    : null;
-}
-
-function getRandomIncompleteCategoryIndex(categories: string[], stats: Record<string, { total: number; completed: number }>): number | null {
-  const incompleteCategoryIndices = categories
-    .map((category, index) => ({ hasIncomplete: stats[category].completed < stats[category].total, index }))
-    .filter(c => c.hasIncomplete)
-    .map(c => c.index);
-  return incompleteCategoryIndices.length > 0
-    ? incompleteCategoryIndices[Math.floor(Math.random() * incompleteCategoryIndices.length)]
-    : null;
-}
-
-async function listProblemsByCategory(problems: Problem[]): Promise<void> {
-  while (true) {
-    const stats = getCategoryStats(problems);
-    const categories = Object.keys(stats).sort();
-    let randomCategoryIndex = getRandomIncompleteCategoryIndex(categories, stats);
-
-    const categoryChoice = await select({
-      message: 'Select a category (or choose "Reroll" to get a new random category):',
-      options: [
-        { value: 'back', label: 'Go back' },
-        { value: 'reroll', label: 'Reroll random category' },
-        ...categories.map((category, index) => ({
-          value: category,
-          label: `${category} (${stats[category].completed}/${stats[category].total}, ${(stats[category].completed / stats[category].total * 100).toFixed(1)}%)${index === randomCategoryIndex ? ' 🎲' : ''}`
-        }))
-      ]
-    });
-
-    if (isCancel(categoryChoice) || categoryChoice === 'back') {
-      break;
-    }
-
-    if (categoryChoice === 'reroll') {
-      continue;
-    }
-
-    const categoryProblems = problems.filter(p => p.category === categoryChoice);
-    let randomIncompleteIndex = getRandomIncompleteIndex(categoryProblems);
-
-    while (true) {
-      note(chalk.bold(`${categoryChoice} (${stats[categoryChoice as string].completed}/${stats[categoryChoice as string].total}, ${(stats[categoryChoice as string].completed / stats[categoryChoice as string].total * 100).toFixed(1)}%)`));
-
-      const sortedProblems = [
-        ...categoryProblems.filter(p => !p.isComplete),
-        ...categoryProblems.filter(p => p.isComplete)
-      ];
-
-      const problemChoice = await select({
-        message: 'Select a problem (or choose "Reroll" to get a new random problem):',
-        options: [
-          { value: 'back', label: 'Go back to categories' },
-          { value: 'reroll', label: 'Reroll random problem' },
-          ...sortedProblems.map((problem, index) => ({
-            value: categoryProblems.indexOf(problem).toString(),
-            label: `${problem.isComplete ? chalk.dim('✓') : ' '} ${problem.link}${categoryProblems.indexOf(problem) === randomIncompleteIndex ? ' 🎲' : ''}`
-          }))
-        ]
-      });
-
-      if (isCancel(problemChoice) || problemChoice === 'back') {
-        break;
-      }
-
-      if (problemChoice === 'reroll') {
-        randomIncompleteIndex = getRandomIncompleteIndex(categoryProblems);
-        continue;
-      }
-
-      const selectedProblem = categoryProblems[parseInt(problemChoice as string)];
-      const newStatus = await confirm({
-        message: `Set problem status (current: ${selectedProblem.isComplete ? 'complete' : 'incomplete'}):`,
-        initialValue: selectedProblem.isComplete,
-      });
-
-      if (isCancel(newStatus)) {
-        continue;
-      }
-
-      if (newStatus !== selectedProblem.isComplete) {
-        selectedProblem.isComplete = newStatus;
-        await writeProblems(problems);
-        note(chalk.green(`Problem status updated to ${newStatus ? 'complete' : 'incomplete'}.`));
-        stats[categoryChoice as string].completed += newStatus ? 1 : -1;
-      }
-
-      randomIncompleteIndex = getRandomIncompleteIndex(categoryProblems);
-    }
-  }
-}
-
-async function selectRandomProblem(problems: Problem[]): Promise<void> {
-  const incompleteProblemIndices = problems
-    .map((p, index) => ({ isComplete: p.isComplete, index }))
-    .filter(p => !p.isComplete)
-    .map(p => p.index);
-
-  if (incompleteProblemIndices.length === 0) {
-    note(chalk.yellow('Congratulations! All problems are completed.'));
-    return;
-  }
-
-  const randomIndex = incompleteProblemIndices[Math.floor(Math.random() * incompleteProblemIndices.length)];
-  const problem = problems[randomIndex];
-  const stats = getCategoryStats(problems);
-
-  note(chalk.bold(`${problem.category} (${stats[problem.category].completed}/${stats[problem.category].total}, ${(stats[problem.category].completed / stats[problem.category].total * 100).toFixed(1)}%)`));
-  console.log(chalk.green(`Random problem: ${problem.link}`));
-
-  const isCompleted = await confirm({
-    message: 'Did you complete this problem?'
-  });
-
-  if (isCancel(isCompleted)) {
-    return;
-  }
-
-  if (isCompleted !== problem.isComplete) {
-    problem.isComplete = isCompleted;
-    await writeProblems(problems);
-    note(chalk.green(`Problem marked as ${isCompleted ? 'completed' : 'incomplete'} and CSV file updated.`));
-  }
-}
+let problems = JSON.parse(readFileSync("grind75.json", "utf8"), dateReviver) as Problem[];
 
 async function main() {
-  intro(chalk.bold('LeetCode Problem Manager'));
-
-  const problems = await readProblems();
+  intro(chalk.bold(chalk.green("Grind75 Manager")));
 
   while (true) {
     const action = await select({
-      message: 'Choose an action:',
+      message: "Select an action:",
       options: [
-        { value: 'list', label: 'List problems by category' },
-        { value: 'random', label: 'Select random problem' },
-        { value: 'exit', label: 'Exit' }
-      ]
+        { value: "next", label: "Open next problem" },
+        { value: "show_progress", label: "View progress" },
+        { value: "list_category", label: "List problems by category" },
+        { value: "exit", label: "Exit" },
+      ],
     });
 
-    if (isCancel(action) || action === 'exit') {
+    if (isCancel(action) || action === "exit") {
       break;
     }
 
     switch (action) {
-      case 'list':
-        await listProblemsByCategory(problems);
+      case "next":
+        await nextProblem();
         break;
-      case 'random':
-        await selectRandomProblem(problems);
+      case "show_progress":
+        await showProgress();
+        break;
+      case "list_category":
+        await listProblemsByCategory();
         break;
     }
   }
+}
 
-  outro(chalk.bold('Goodbye!'));
+type Problem = {
+  name: string;
+  isComplete: boolean;
+  timeTaken: string | null;
+  timeExpected: string;
+  completionDate: Date | null;
+  url: string;
+  category: string;
+  difficulty: string;
+};
+
+function writeProblems(): void {
+  const content = JSON.stringify(problems, null, 2);
+  writeFileSync("grind75.json", content);
+}
+
+async function nextProblem() {
+  const probIndex = problems.findIndex(p => !p.isComplete);
+  if (probIndex === -1) {
+    note(chalk.yellow("Congratulations! All problems are completed."));
+    return;
+  }
+  const problem = problems[probIndex];
+
+  const timeTaken = await text({
+    message: `${chalk.bold(chalk.green(`${problem.name}: ~${problem.timeExpected}`))}\n${chalk.bold(
+      chalk.yellow(problem.url)
+    )}\n${chalk.italic(
+      "Enter time taken or press Ctrl+C to cancel. Put 0 if you forgot to time it."
+    )}`,
+    initialValue: "",
+  });
+
+  problems[probIndex].isComplete = true;
+  problems[probIndex].completionDate = new Date();
+  problems[probIndex].timeTaken = String(timeTaken);
+  writeProblems();
+
+  console.log(chalk.green(`Nice job! Your progress has been updated.`));
+  console.log(
+    chalk.yellow(
+      chalk.bold(
+        `You completed a ${problem.difficulty.toLowerCase()} ${
+          problem.category
+        } problem in ${String(timeTaken)}.`
+      )
+    )
+  );
+}
+
+async function showProgress() {
+  const nComplete = problems.filter(p => p.isComplete).length;
+  const nTotal = problems.length;
+  const percentComplete = Math.round((nComplete / nTotal) * 100);
+
+  const earliestDate = new Date(
+    problems.reduce((acc, p) => Math.min(acc, p.completionDate?.getTime() ?? Infinity), Infinity)
+  );
+  const daysGoing = Math.round(
+    (new Date().getTime() - earliestDate.getTime()) / (1000 * 60 * 60 * 24)
+  ) + 1;
+  const dailyAverage = (nComplete / daysGoing).toFixed(2);
+
+  console.log(
+    chalk.bold(`${nComplete}/${nTotal} (${percentComplete}%)
+Daily average: ${dailyAverage} problems
+Days completing problems: ${daysGoing} days
+${renderProgressBar(nComplete, nTotal)}`)
+  );
+}
+
+async function listProblemsByCategory() {}
+
+function renderProgressBar(nComplete: number, nTotal: number): string {
+  const nLeft = nTotal - nComplete;
+  return "|".repeat(nComplete) + ".".repeat(nLeft);
 }
 
 main().catch(console.error);
-
