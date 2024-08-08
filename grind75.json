@@ -21,73 +21,73 @@
   },
   {
     "name": "Merge Two Sorted Lists",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/merge-two-sorted-lists",
     "category": "Linked List",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T18:55:05.723Z",
+    "timeTaken": 259
   },
   {
     "name": "Best Time to Buy and Sell Stock",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
     "category": "Array",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T19:06:07.843Z",
+    "timeTaken": 612
   },
   {
     "name": "Valid Palindrome",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/valid-palindrome",
     "category": "String",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T19:15:24.880Z",
+    "timeTaken": 256
   },
   {
     "name": "Invert Binary Tree",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/invert-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T19:18:11.250Z",
+    "timeTaken": 101
   },
   {
     "name": "Valid Anagram",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/valid-anagram",
     "category": "String",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T19:22:56.285Z",
+    "timeTaken": 208
   },
   {
     "name": "Binary Search",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/binary-search",
     "category": "Binary Search",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T19:30:01.671Z",
+    "timeTaken": 370
   },
   {
     "name": "Flood Fill",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/flood-fill",
     "category": "Graph",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T19:39:00.401Z",
+    "timeTaken": 475
   },
   {
     "name": "Lowest Common Ancestor of a Binary Search Tree",

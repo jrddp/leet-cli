@@ -25,7 +25,6 @@ async function main() {
       options: [
         { value: "next", label: "Open next problem" },
         { value: "show_progress", label: "View progress" },
-        { value: "list_category", label: "List problems by category" },
         { value: "recent", label: "View recently completed problems" },
         { value: "exit", label: "Exit" },
       ],
@@ -41,9 +40,6 @@ async function main() {
         break;
       case "show_progress":
         await showProgress();
-        break;
-      case "list_category":
-        await listProblemsByCategory();
         break;
       case "recent":
         await viewRecentlyCompleted();
@@ -140,12 +136,10 @@ async function showProgress() {
     Math.round((new Date().getTime() - earliestDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
   const dailyAverage = (nComplete / daysGoing).toFixed(2);
 
-  console.log(
-    chalk.bold(`${nComplete}/${nTotal} (${percentComplete}%)
+  let output = chalk.bold(`${nComplete}/${nTotal} (${percentComplete}%)
 Daily average: ${dailyAverage} problems
 Days completing problems: ${daysGoing} days
-${renderProgressBar(nComplete, nTotal)}`)
-  );
+${renderProgressBar(nComplete, nTotal)}\n`);
 
   // Calculate average time for each difficulty
   const difficultyLevels = ["Easy", "Medium", "Hard"];
@@ -156,18 +150,16 @@ ${renderProgressBar(nComplete, nTotal)}`)
     if (relevantProblems.length > 0) {
       const averageTime =
         relevantProblems.reduce((sum, p) => sum + (p.timeTaken || 0), 0) / relevantProblems.length;
-      console.log(
-        chalk.cyan(
-          `Average time for ${difficulty} problems: ${formatSecondsToTime(Math.round(averageTime))}`
-        )
+      output += chalk.cyan(
+        `Average time for ${difficulty} problems: ${formatSecondsToTime(Math.round(averageTime))}\n`
       );
     } else {
-      console.log(chalk.cyan(`No completed ${difficulty} problems with valid time taken.`));
+      output += chalk.cyan(`No completed ${difficulty} problems with valid time taken.\n`);
     }
   });
-}
 
-async function listProblemsByCategory() {}
+  await displayAndWait(output);
+}
 
 function renderProgressBar(nComplete: number, nTotal: number): string {
   const nLeft = nTotal - nComplete;
@@ -197,6 +189,7 @@ async function viewRecentlyCompleted() {
     return;
   }
 
+  let output = "";
   completedProblems.forEach(problem => {
     const difficultyColor =
       problem.difficulty === "Easy"
@@ -214,19 +207,26 @@ async function viewRecentlyCompleted() {
       (new Date().getTime() - (problem.completionDate?.getTime() || 0)) / (1000 * 60 * 60 * 24)
     );
 
-    console.log(
-      `${chalk.bold(problem.name)} ${difficultyColor(problem.difficulty)} ${chalk.blue(
-        problem.category
-      )} ${chalk.yellow(`Completed: ${problem.completionDate?.toLocaleString()}`)} ${chalk.dim(
-        `(${daysSinceCompletion} days ago)`
-      )}`
-    );
-    console.log(
-      `Completed in ${
-        problem.timeTaken ? formatSecondsToTime(problem.timeTaken) : "0"
-      } ${timeDiffColor(`(${timeDiffFormatted})`)}`
-    );
-    console.log("---");
+    output += `${chalk.bold(problem.name)} ${difficultyColor(problem.difficulty)} ${chalk.blue(
+      problem.category
+    )} ${chalk.yellow(`Completed: ${problem.completionDate?.toLocaleString()}`)} ${chalk.dim(
+      `(${daysSinceCompletion} days ago)`
+    )}\n`;
+    output += `Completed in ${
+      problem.timeTaken ? formatSecondsToTime(problem.timeTaken) : "0"
+    } ${timeDiffColor(`(${timeDiffFormatted})`)}\n`;
+    output += "---\n";
+  });
+
+  await displayAndWait(output);
+}
+
+async function displayAndWait(content: string) {
+  console.log(content);
+  await text({
+    message: "Press Enter to continue",
+    initialValue: "",
+    defaultValue: ":)",
   });
 }
 
