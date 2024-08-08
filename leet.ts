@@ -89,31 +89,27 @@ async function nextProblem() {
   const problem = problems[probIndex];
 
   let timeTaken: string | symbol;
-  while (true) {
-    timeTaken = await text({
-      message: `${chalk.bold(
-        chalk.green(`${problem.name}: ~${problem.timeExpected}`)
-      )}\n${chalk.bold(chalk.yellow(problem.url))}\n${chalk.italic(
-        "Enter time taken in m:ss format. Put 0 if you forgot to time it. Press Ctrl+C to cancel."
-      )}`,
-      initialValue: "",
-      validate: input => {
-        if (input === "0" || /^\d+:\d{2}$/.test(input)) {
-          return;
-        }
-        return "Please enter time in m:ss format (e.g., 5:30) or 0";
-      },
-    });
-
-    if (!isCancel(timeTaken)) break;
-  }
+  timeTaken = await text({
+    message: `${chalk.bold(chalk.green(`${problem.name}: ~${problem.timeExpected}`))}\n${chalk.bold(
+      chalk.yellow(problem.url)
+    )}\n${chalk.italic(
+      "Enter time taken in m:ss format. Put 0 if you forgot to time it. Press Ctrl+C to cancel."
+    )}`,
+    initialValue: "",
+    validate: input => {
+      if (input === "0" || /^\d+:\d{2}$/.test(input)) {
+        return;
+      }
+      return "Please enter time in m:ss format (e.g., 5:30) or 0";
+    },
+  });
 
   if (isCancel(timeTaken)) {
     note(chalk.yellow("Problem completion cancelled."));
     return;
   }
 
-  const timeTakenSeconds = parseTimeToSeconds(timeTaken);
+  const timeTakenSeconds = parseTimeToSeconds(timeTaken as string);
 
   problems[probIndex].isComplete = true;
   problems[probIndex].completionDate = new Date();
