@@ -1,23 +1,23 @@
 [
   {
     "name": "Two Sum",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/two-sum",
     "category": "Array",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T18:34:30.114Z",
+    "timeTaken": 120
   },
   {
     "name": "Valid Parentheses",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/valid-parentheses",
     "category": "Stack",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-08T18:34:35.474Z",
+    "timeTaken": 270
   },
   {
     "name": "Merge Two Sorted Lists",

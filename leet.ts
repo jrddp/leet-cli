@@ -3,6 +3,8 @@ import { intro, outro, select, confirm, note, isCancel, text } from "@clack/prom
 import chalk from "chalk";
 import { readFileSync, writeFileSync } from "fs";
 
+const problemsFilePath = "/Users/jard/Scripts/leet/grind75.json";
+
 function dateReviver(key: string, value: any) {
   const dateFormat = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/;
 
@@ -12,10 +14,7 @@ function dateReviver(key: string, value: any) {
   return value;
 }
 
-let problems = JSON.parse(
-  readFileSync("/Users/jard/Scripts/leet/grind75.json", "utf8"),
-  dateReviver
-) as Problem[];
+let problems = JSON.parse(readFileSync(problemsFilePath, "utf8"), dateReviver) as Problem[];
 
 async function main() {
   intro(chalk.bold(chalk.green("Grind75 Manager")));
@@ -62,7 +61,7 @@ type Problem = {
 
 function writeProblems(): void {
   const content = JSON.stringify(problems, null, 2);
-  writeFileSync("grind75.json", content);
+  writeFileSync(problemsFilePath, content);
 }
 
 function parseTimeToSeconds(timeString: string): number {
