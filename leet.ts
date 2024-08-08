@@ -1,9 +1,9 @@
 #!/usr/bin/env bun
 import { intro, outro, select, confirm, note, isCancel, text } from "@clack/prompts";
 import chalk from "chalk";
-import { readFileSync, write, writeFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
 
-function dateReviver(key, value) {
+function dateReviver(key: string, value: any) {
   const dateFormat = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/;
 
   if (typeof value === "string" && dateFormat.test(value)) {
@@ -12,7 +12,10 @@ function dateReviver(key, value) {
   return value;
 }
 
-let problems = JSON.parse(readFileSync("/Users/jard/Scripts/leet/grind75.json", "utf8"), dateReviver) as Problem[];
+let problems = JSON.parse(
+  readFileSync("/Users/jard/Scripts/leet/grind75.json", "utf8"),
+  dateReviver
+) as Problem[];
 
 async function main() {
   intro(chalk.bold(chalk.green("Grind75 Manager")));
@@ -49,7 +52,7 @@ async function main() {
 type Problem = {
   name: string;
   isComplete: boolean;
-  timeTaken: string | null;
+  timeTaken: number | null;
   timeExpected: string;
   completionDate: Date | null;
   url: string;
@@ -62,6 +65,18 @@ function writeProblems(): void {
   writeFileSync("grind75.json", content);
 }
 
+function parseTimeToSeconds(timeString: string): number {
+  if (timeString === "0") return 0;
+  const [minutes, seconds] = timeString.split(":").map(Number);
+  return minutes * 60 + seconds;
+}
+
+function formatSecondsToTime(seconds: number): string {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
+}
+
 async function nextProblem() {
   const probIndex = problems.findIndex(p => !p.isComplete);
   if (probIndex === -1) {
@@ -70,18 +85,35 @@ async function nextProblem() {
   }
   const problem = problems[probIndex];
 
-  const timeTaken = await text({
-    message: `${chalk.bold(chalk.green(`${problem.name}: ~${problem.timeExpected}`))}\n${chalk.bold(
-      chalk.yellow(problem.url)
-    )}\n${chalk.italic(
-      "Enter time taken or press Ctrl+C to cancel. Put 0 if you forgot to time it."
-    )}`,
-    initialValue: "",
-  });
+  let timeTaken: string | symbol;
+  while (true) {
+    timeTaken = await text({
+      message: `${chalk.bold(
+        chalk.green(`${problem.name}: ~${problem.timeExpected}`)
+      )}\n${chalk.bold(chalk.yellow(problem.url))}\n${chalk.italic(
+        "Enter time taken in m:ss format. Put 0 if you forgot to time it. Press Ctrl+C to cancel."
+      )}`,
+      initialValue: "",
+      validate: input => {
+        if (input === "0" || !/^\d+:\d{2}$/.test(input)) {
+          return "Please enter time in m:ss format (e.g., 5:30)";
+        }
+      },
+    });
+
+    if (!isCancel(timeTaken)) break;
+  }
+
+  if (isCancel(timeTaken)) {
+    note(chalk.yellow("Problem completion cancelled."));
+    return;
+  }
+
+  const timeTakenSeconds = parseTimeToSeconds(timeTaken);
 
   problems[probIndex].isComplete = true;
   problems[probIndex].completionDate = new Date();
-  problems[probIndex].timeTaken = String(timeTaken);
+  problems[probIndex].timeTaken = timeTakenSeconds;
   writeProblems();
 
   console.log(chalk.green(`Nice job! Your progress has been updated.`));
@@ -90,7 +122,7 @@ async function nextProblem() {
       chalk.bold(
         `You completed a ${problem.difficulty.toLowerCase()} ${
           problem.category
-        } problem in ${String(timeTaken)}.`
+        } problem in ${timeTaken}.`
       )
     )
   );
@@ -114,6 +146,25 @@ Daily average: ${dailyAverage} problems
 Days completing problems: ${daysGoing} days
 ${renderProgressBar(nComplete, nTotal)}`)
   );
+
+  // Calculate average time for each difficulty
+  const difficultyLevels = ["Easy", "Medium", "Hard"];
+  difficultyLevels.forEach(difficulty => {
+    const relevantProblems = problems.filter(
+      p => p.difficulty === difficulty && p.isComplete && p.timeTaken && p.timeTaken > 0
+    );
+    if (relevantProblems.length > 0) {
+      const averageTime =
+        relevantProblems.reduce((sum, p) => sum + (p.timeTaken || 0), 0) / relevantProblems.length;
+      console.log(
+        chalk.cyan(
+          `Average time for ${difficulty} problems: ${formatSecondsToTime(Math.round(averageTime))}`
+        )
+      );
+    } else {
+      console.log(chalk.cyan(`No completed ${difficulty} problems with valid time taken.`));
+    }
+  });
 }
 
 async function listProblemsByCategory() {}
