@@ -4,12 +4,12 @@ isComplete,link,category
 1,https://leetcode.com/problems/reverse-words-in-a-string-iii,Strings
 1,https://leetcode.com/problems/valid-palindrome,Strings
 1,https://leetcode.com/problems/reverse-vowels-of-a-string,Strings
-0,https://leetcode.com/problems/longest-common-prefix,Strings
+1,https://leetcode.com/problems/longest-common-prefix,Strings
 1,https://leetcode.com/problems/two-sum/,Arrays
 1,https://leetcode.com/problems/number-of-islands/,Arrays
 1,https://leetcode.com/problems/sort-array-by-parity,Arrays
 1,https://leetcode.com/problems/transpose-matrix,Arrays
-0,https://leetcode.com/problems/flipping-an-image,Arrays
+1,https://leetcode.com/problems/flipping-an-image,Arrays
 1,https://leetcode.com/problems/merge-intervals,Sorting
 1,https://leetcode.com/problems/valid-anagram,Sorting
 1,https://leetcode.com/problems/array-partition,Sorting
@@ -23,7 +23,7 @@ isComplete,link,category
 0,https://leetcode.com/problems/score-of-parentheses,Stacks
 1,https://leetcode.com/problems/add-two-numbers/,Linked Lists
 1,https://leetcode.com/problems/reverse-linked-list,Linked Lists
-0,https://leetcode.com/problems/reverse-linked-list-ii,Linked Lists
+1,https://leetcode.com/problems/reverse-linked-list-ii,Linked Lists
 0,https://leetcode.com/problems/odd-even-linked-list,Linked Lists
 1,https://leetcode.com/problems/intersection-of-two-linked-lists,Linked Lists
 0,https://leetcode.com/problems/reverse-nodes-in-k-group,Linked Lists
@@ -55,15 +55,15 @@ isComplete,link,category
 1,https://leetcode.com/problems/first-unique-character-in-a-string,Multiset (Bags)
 1,https://leetcode.com/problems/subdomain-visit-count,Multiset (Bags)
 0,https://leetcode.com/problems/find-the-difference,Multiset (Bags)
-0,https://leetcode.com/problems/sort-characters-by-frequency,Multiset (Bags)
+1,https://leetcode.com/problems/sort-characters-by-frequency,Multiset (Bags)
 0,https://leetcode.com/problems/most-common-word,Multiset (Bags)
-0,https://leetcode.com/problems/sort-characters-by-frequency,Multiset (Bags)
+1,https://leetcode.com/problems/sort-characters-by-frequency,Multiset (Bags)
 0,https://leetcode.com/problems/set-mismatch,Multiset (Bags)
 0,https://leetcode.com/problems/number-of-atoms,Multiset (Bags)
 1,https://leetcode.com/problems/powx-n,Recursion Memoization
 0,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Recursion Memoization
 0,https://leetcode.com/problems/edit-distance,Recursion Memoization
-0,https://leetcode.com/problems/house-robber-ii,Recursion Memoization
+1,https://leetcode.com/problems/house-robber-ii,Recursion Memoization
 0,https://leetcode.com/problems/regular-expression-matching/,Recursion Memoization
 1,https://leetcode.com/problems/coin-change/,Dynamic Programming
 0,https://leetcode.com/problems/best-time-to-buy-and-sell-stock,Dynamic Programming
@@ -76,6 +76,6 @@ isComplete,link,category
 0,https://leetcode.com/problems/rotate-array,Queues
 1,https://leetcode.com/problems/course-schedule,Graphs
 0,https://leetcode.com/problems/island-perimeter,Graphs
-0,https://leetcode.com/problems/is-graph-bipartite,Graphs
+1,https://leetcode.com/problems/is-graph-bipartite,Graphs
 0,https://leetcode.com/problems/word-search,Graphs
 0,https://leetcode.com/problems/course-schedule-ii,Graphs
