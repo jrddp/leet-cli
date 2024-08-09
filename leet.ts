@@ -20,13 +20,7 @@ async function main() {
   intro(chalk.bold(chalk.green("Grind75 Manager")));
 
   while (true) {
-    const reviewProblems = problems.filter(
-      p => p.reviewScheduled && p.reviewScheduled <= new Date()
-    );
     const options = [
-      ...(reviewProblems.length > 0
-        ? [{ value: "review", label: chalk.red(`Review problems (${reviewProblems.length})`) }]
-        : []),
       { value: "next", label: "Open next problem" },
       { value: "show_progress", label: "View progress" },
       { value: "recent", label: "View recently completed problems" },
@@ -43,9 +37,6 @@ async function main() {
     }
 
     switch (action) {
-      case "review":
-        await reviewProblems();
-        break;
       case "next":
         await nextProblem();
         break;
