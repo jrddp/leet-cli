@@ -83,13 +83,14 @@ function formatSecondsToTime(seconds: number): string {
 
 async function nextProblem(startIndex = 0) {
   // incomplete with review scheduled implies failure -> failed today -> don't show again
-  const probIndex = problems
-    .slice(startIndex)
-    .findIndex(p =>
-      p.isComplete
-        ? p.reviewScheduled && p.reviewScheduled < new Date()
-        : !(p.reviewScheduled && p.reviewScheduled < new Date())
-    ) + startIndex;
+  const probIndex =
+    problems
+      .slice(startIndex)
+      .findIndex(p =>
+        p.isComplete
+          ? p.reviewScheduled && p.reviewScheduled < new Date()
+          : !(p.reviewScheduled && p.reviewScheduled < new Date())
+      ) + startIndex;
 
   if (probIndex === -1) {
     note(chalk.yellow("Congratulations! All problems are completed."));
@@ -97,9 +98,18 @@ async function nextProblem(startIndex = 0) {
   }
   const problem = problems[probIndex];
 
+  const difficultyText =
+    problem.difficulty === "Easy"
+      ? chalk.green(problem.difficulty)
+      : problem.difficulty === "Medium"
+      ? chalk.yellow(problem.difficulty)
+      : chalk.red(problem.difficulty);
+
   const isReview = problem.reviewScheduled && problem.reviewScheduled <= new Date();
   const reviewText = isReview ? chalk.red(" [REVIEW]") : "";
-  const header = `${problem.name}: ~${problem.timeExpected}${reviewText}`;
+  const header = `${problem.name}: ~${problem.timeExpected} ${chalk.italic(
+    difficultyText
+  )}${reviewText}`;
   const formattedHeader = isReview ? chalk.red(header) : chalk.green(header);
 
   let timeTaken: string | symbol;
@@ -291,7 +301,7 @@ async function viewRecentlyCompleted() {
       problem.difficulty === "Easy"
         ? chalk.green
         : problem.difficulty === "Medium"
-        ? chalk.hex("#FFA500") // Orange
+        ? chalk.yellow
         : chalk.red;
 
     const expectedTime = parseExpectedTime(problem.timeExpected);
