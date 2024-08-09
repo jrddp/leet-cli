@@ -99,7 +99,8 @@
     "completionDate": null,
     "timeTaken": null,
     "attempts": 1,
-    "reviewScheduled": "2024-08-10T00:32:46.578Z"
+    "reviewScheduled": "2024-08-10T00:52:44.817Z",
+    "failDesc": "I didn't pay attention to the problem description!! It was very important to notice that it was a BST, not just an unsorted binary tree"
   },
   {
     "name": "Balanced Binary Tree",
