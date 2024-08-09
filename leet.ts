@@ -81,34 +81,56 @@ function formatSecondsToTime(seconds: number): string {
   return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
 }
 
-async function nextProblem() {
-  const probIndex = problems.findIndex(
-    p => !p.isComplete && (!p.reviewScheduled || p.reviewScheduled < new Date())
-  );
+async function nextProblem(startIndex = 0) {
+  // incomplete with review scheduled implies failure -> failed today -> don't show again
+  const probIndex = problems
+    .slice(startIndex)
+    .findIndex(p =>
+      p.isComplete
+        ? p.reviewScheduled && p.reviewScheduled < new Date()
+        : !(p.reviewScheduled && p.reviewScheduled < new Date())
+    ) + startIndex;
+
   if (probIndex === -1) {
     note(chalk.yellow("Congratulations! All problems are completed."));
     return;
   }
   const problem = problems[probIndex];
 
+  const isReview = problem.reviewScheduled && problem.reviewScheduled <= new Date();
+  const reviewText = isReview ? chalk.red(" [REVIEW]") : "";
+  const header = `${problem.name}: ~${problem.timeExpected}${reviewText}`;
+  const formattedHeader = isReview ? chalk.red(header) : chalk.green(header);
+
   let timeTaken: string | symbol;
   timeTaken = await text({
-    message: `${chalk.bold(chalk.green(`${problem.name}: ~${problem.timeExpected}`))}\n${chalk.bold(
+    message: `${chalk.italic(probIndex + 1)} ${chalk.bold(formattedHeader)}\n${chalk.bold(
       chalk.yellow(problem.url)
     )}\n${chalk.italic(
-      "Enter time taken in m:ss format. Put 0 if you forgot to time it. Enter 'fail' if you couldn't solve it. Press Ctrl+C to cancel."
+      "Enter time taken in m:ss format. Put 0 if you forgot to time it. Enter 'fail' if you couldn't solve it. Enter 'skip' to skip. Press Ctrl+C to cancel."
     )}`,
-    initialValue: "",
+    defaultValue: "skip",
+    placeholder: "skip",
     validate: input => {
-      if (input === "0" || input === "fail" || /^\d+:\d{2}$/.test(input)) {
+      if (
+        !input ||
+        input === "0" ||
+        input === "fail" ||
+        input === "skip" ||
+        /^\d+:\d{2}$/.test(input)
+      ) {
         return;
       }
-      return "Please enter time in m:ss format (e.g., 5:30), 0, or 'fail'";
+      return "Please enter time in m:ss format (e.g., 5:30), 0, 'fail', or 'skip'";
     },
   });
 
   if (isCancel(timeTaken)) {
-    note(chalk.yellow("Problem completion cancelled."));
+    return;
+  }
+
+  if (timeTaken === "skip") {
+    await nextProblem(probIndex + 1);
     return;
   }
 
@@ -144,7 +166,12 @@ async function nextProblem() {
       ],
     });
 
-    if (!isCancel(reviewChoice) && reviewChoice !== "no") {
+    if (isCancel(reviewChoice)) {
+      problem.reviewScheduled = new Date(new Date().setDate(new Date().getDate() + 1));
+      return;
+    }
+    problem.reviewScheduled = null;
+    if (reviewChoice !== "no") {
       const days = parseInt(reviewChoice);
       problem.reviewScheduled = new Date(new Date().setDate(new Date().getDate() + days));
       note(chalk.green(`Review scheduled in ${days} day${days > 1 ? "s" : ""}.`));
@@ -160,9 +187,9 @@ async function nextProblem() {
         )
       )
     );
-  }
 
-  writeProblems();
+    writeProblems();
+  }
 }
 
 async function reviewProblems() {
