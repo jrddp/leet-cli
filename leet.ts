@@ -20,14 +20,22 @@ async function main() {
   intro(chalk.bold(chalk.green("Grind75 Manager")));
 
   while (true) {
+    const reviewProblems = problems.filter(
+      p => p.reviewScheduled && p.reviewScheduled <= new Date()
+    );
+    const options = [
+      ...(reviewProblems.length > 0
+        ? [{ value: "review", label: chalk.red(`Review problems (${reviewProblems.length})`) }]
+        : []),
+      { value: "next", label: "Open next problem" },
+      { value: "show_progress", label: "View progress" },
+      { value: "recent", label: "View recently completed problems" },
+      { value: "exit", label: "Exit" },
+    ];
+
     const action = await select({
       message: "Select an action:",
-      options: [
-        { value: "next", label: "Open next problem" },
-        { value: "show_progress", label: "View progress" },
-        { value: "recent", label: "View recently completed problems" },
-        { value: "exit", label: "Exit" },
-      ],
+      options,
     });
 
     if (isCancel(action) || action === "exit") {
@@ -35,6 +43,9 @@ async function main() {
     }
 
     switch (action) {
+      case "review":
+        await reviewProblems();
+        break;
       case "next":
         await nextProblem();
         break;
@@ -57,6 +68,8 @@ type Problem = {
   url: string;
   category: string;
   difficulty: string;
+  attempts: number;
+  reviewScheduled: Date | null;
 };
 
 function writeProblems(): void {
@@ -77,7 +90,9 @@ function formatSecondsToTime(seconds: number): string {
 }
 
 async function nextProblem() {
-  const probIndex = problems.findIndex(p => !p.isComplete);
+  const probIndex = problems.findIndex(
+    p => !p.isComplete && (!p.reviewScheduled || p.reviewScheduled < new Date())
+  );
   if (probIndex === -1) {
     note(chalk.yellow("Congratulations! All problems are completed."));
     return;
@@ -89,14 +104,14 @@ async function nextProblem() {
     message: `${chalk.bold(chalk.green(`${problem.name}: ~${problem.timeExpected}`))}\n${chalk.bold(
       chalk.yellow(problem.url)
     )}\n${chalk.italic(
-      "Enter time taken in m:ss format. Put 0 if you forgot to time it. Press Ctrl+C to cancel."
+      "Enter time taken in m:ss format. Put 0 if you forgot to time it. Enter 'fail' if you couldn't solve it. Press Ctrl+C to cancel."
     )}`,
     initialValue: "",
     validate: input => {
-      if (input === "0" || /^\d+:\d{2}$/.test(input)) {
+      if (input === "0" || input === "fail" || /^\d+:\d{2}$/.test(input)) {
         return;
       }
-      return "Please enter time in m:ss format (e.g., 5:30) or 0";
+      return "Please enter time in m:ss format (e.g., 5:30), 0, or 'fail'";
     },
   });
 
@@ -105,23 +120,77 @@ async function nextProblem() {
     return;
   }
 
-  const timeTakenSeconds = parseTimeToSeconds(timeTaken as string);
+  if (!problem.attempts) {
+    problem.attempts = 0;
+  }
+  problem.attempts++;
 
-  problems[probIndex].isComplete = true;
-  problems[probIndex].completionDate = new Date();
-  problems[probIndex].timeTaken = timeTakenSeconds;
-  writeProblems();
+  if (timeTaken === "fail") {
+    problem.reviewScheduled = new Date(new Date().setDate(new Date().getDate() + 1));
+    note(chalk.yellow(`Problem marked for review tomorrow.`));
+  } else {
+    const timeTakenSeconds = parseTimeToSeconds(timeTaken as string);
+    problem.isComplete = true;
+    problem.completionDate = new Date();
+    problem.timeTaken = timeTakenSeconds;
 
-  console.log(chalk.green(`Nice job! Your progress has been updated.`));
-  console.log(
-    chalk.yellow(
-      chalk.bold(
-        `You completed a ${problem.difficulty.toLowerCase()} ${
-          problem.category
-        } problem in ${timeTaken}.`
+    const reviewChoice = await select({
+      message: "Schedule review?",
+      options: [
+        { value: "no", label: "No" },
+        { value: "1", label: "Tomorrow" },
+        { value: "3", label: "In 3 days" },
+        { value: "5", label: "In 5 days" },
+      ],
+    });
+
+    if (!isCancel(reviewChoice) && reviewChoice !== "no") {
+      const days = parseInt(reviewChoice);
+      problem.reviewScheduled = new Date(new Date().setDate(new Date().getDate() + days));
+      note(chalk.green(`Review scheduled in ${days} day${days > 1 ? "s" : ""}.`));
+    }
+
+    console.log(chalk.green(`Nice job! Your progress has been updated.`));
+    console.log(
+      chalk.yellow(
+        chalk.bold(
+          `You completed a ${problem.difficulty.toLowerCase()} ${
+            problem.category
+          } problem in ${timeTaken}.`
+        )
       )
-    )
-  );
+    );
+  }
+
+  writeProblems();
+}
+
+async function reviewProblems() {
+  const reviewProblems = problems.filter(p => p.reviewScheduled && p.reviewScheduled <= new Date());
+
+  for (const problem of reviewProblems) {
+    const action = await select({
+      message: `Review ${chalk.bold(problem.name)}?`,
+      options: [
+        { value: "yes", label: "Yes" },
+        { value: "skip", label: "Skip" },
+        { value: "cancel", label: "Cancel review session" },
+      ],
+    });
+
+    if (action === "cancel" || isCancel(action)) {
+      break;
+    }
+
+    if (action === "yes") {
+      await nextProblem();
+    } else {
+      problem.reviewScheduled = new Date(new Date().setDate(new Date().getDate() + 1));
+      note(chalk.yellow(`Problem review postponed to tomorrow.`));
+    }
+  }
+
+  writeProblems();
 }
 
 async function showProgress() {

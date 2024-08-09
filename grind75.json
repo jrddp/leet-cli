@@ -97,7 +97,9 @@
     "difficulty": "Easy",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-10T00:32:46.578Z"
   },
   {
     "name": "Balanced Binary Tree",
