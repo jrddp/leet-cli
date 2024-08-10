@@ -617,9 +617,11 @@
     "timeExpected": "15 mins",
     "completionDate": null,
     "timeTaken": null,
-    "attempts": 0,
-    "reviewScheduled": null,
-    "observations": [],
+    "attempts": 1,
+    "reviewScheduled": "2024-08-11T17:00:23.138Z",
+    "observations": [
+      "ok you had a decent solution you just didn't know about a javascript quirk. you can do >>> 0 to convert a number to an unsigned int."
+    ],
     "timesTaken": []
   },
   {

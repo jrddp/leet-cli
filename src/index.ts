@@ -1,9 +1,12 @@
-#!/usr/bin/env bun
 import { intro, outro, select, confirm, note, isCancel, text } from "@clack/prompts";
 import chalk from "chalk";
 import { readFileSync, writeFileSync } from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const problemsFilePath = "/Users/jard/Scripts/leet/grind75.json";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const problemsFilePath = path.join(__dirname, "..", "data", "grind75.json");
 
 function dateReviver(key: string, value: any) {
   const dateFormat = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z$/;

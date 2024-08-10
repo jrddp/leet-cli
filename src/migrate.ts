@@ -1,4 +1,3 @@
-#!/usr/bin/env bun
 import { readFileSync, writeFileSync } from "fs";
 
 const problemsFilePath = "/Users/jard/Scripts/leet/grind75.json";
