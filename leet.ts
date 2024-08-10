@@ -88,7 +88,7 @@ async function nextProblem(startIndex = 0) {
       .findIndex(p =>
         p.isComplete
           ? p.reviewScheduled && p.reviewScheduled < new Date()
-          : !(p.reviewScheduled && p.reviewScheduled < new Date())
+          : !(p.reviewScheduled && p.reviewScheduled > new Date())
       ) + startIndex;
 
   if (probIndex === -1) {
