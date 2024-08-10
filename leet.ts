@@ -61,7 +61,7 @@ type Problem = {
   difficulty: string;
   attempts: number;
   reviewScheduled: Date | null;
-  failDesc: string | null;
+  observations: string[];
 };
 
 function writeProblems(): void {
@@ -82,7 +82,6 @@ function formatSecondsToTime(seconds: number): string {
 }
 
 async function nextProblem(startIndex = 0) {
-  // incomplete with review scheduled implies failure -> failed today -> don't show again
   const probIndex =
     problems
       .slice(startIndex)
@@ -149,22 +148,30 @@ async function nextProblem(startIndex = 0) {
   }
   problem.attempts++;
 
+  if (!problem.observations) {
+    problem.observations = [];
+  }
+
+  const observation = await text({
+    message:
+      timeTaken === "fail"
+        ? "What observations did you make about your failure?"
+        : "Any observations about the problem?",
+    initialValue: "",
+  });
+
+  if (!isCancel(observation) && observation) {
+    problem.observations.push(observation as string);
+  }
+
   if (timeTaken === "fail") {
     problem.reviewScheduled = new Date(new Date().setDate(new Date().getDate() + 1));
-    const failDesc = await text({
-      message: "Why did you fail?",
-      initialValue: "",
-    });
-    if (!isCancel(failDesc)) {
-      problem.failDesc = failDesc as string;
-    }
     note(chalk.yellow(`Problem marked for review tomorrow.`));
   } else {
     const timeTakenSeconds = parseTimeToSeconds(timeTaken as string);
     problem.isComplete = true;
     problem.completionDate = new Date();
     problem.timeTaken = timeTakenSeconds;
-    problem.failDesc = null; // Clear any previous failure description
 
     const reviewChoice: symbol | "no" | "1" | "3" | "5" = await select({
       message: "Schedule review?",
@@ -197,9 +204,9 @@ async function nextProblem(startIndex = 0) {
         )
       )
     );
-
-    writeProblems();
   }
+
+  writeProblems();
 }
 
 async function reviewProblems() {
@@ -207,7 +214,11 @@ async function reviewProblems() {
 
   for (const problem of reviewProblems) {
     const action = await select({
-      message: `Review ${chalk.bold(problem.name)}?`,
+      message: `Review ${chalk.bold(problem.name)}?${
+        problem.observations && problem.observations.length > 0
+          ? `\nPrevious observations:\n${problem.observations.map(obs => `- ${obs}`).join("\n")}`
+          : ""
+      }`,
       options: [
         { value: "yes", label: "Yes" },
         { value: "skip", label: "Skip" },
@@ -321,6 +332,9 @@ async function viewRecentlyCompleted() {
     output += `Completed in ${
       problem.timeTaken ? formatSecondsToTime(problem.timeTaken) : "0"
     } ${timeDiffColor(`(${timeDiffFormatted})`)}\n`;
+    if (problem.observations && problem.observations.length > 0) {
+      output += `Observations:\n${problem.observations.map(obs => `- ${obs}`).join("\n")}\n`;
+    }
     output += "---\n";
   });
 

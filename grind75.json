@@ -7,7 +7,10 @@
     "difficulty": "Easy",
     "timeExpected": "15 mins",
     "completionDate": "2024-08-08T18:34:30.114Z",
-    "timeTaken": 120
+    "timeTaken": 120,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Valid Parentheses",
@@ -17,7 +20,10 @@
     "difficulty": "Easy",
     "timeExpected": "20 mins",
     "completionDate": "2024-08-08T18:34:35.474Z",
-    "timeTaken": 270
+    "timeTaken": 270,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Merge Two Sorted Lists",
@@ -27,7 +33,10 @@
     "difficulty": "Easy",
     "timeExpected": "20 mins",
     "completionDate": "2024-08-08T18:55:05.723Z",
-    "timeTaken": 259
+    "timeTaken": 259,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Best Time to Buy and Sell Stock",
@@ -37,7 +46,10 @@
     "difficulty": "Easy",
     "timeExpected": "20 mins",
     "completionDate": "2024-08-08T19:06:07.843Z",
-    "timeTaken": 612
+    "timeTaken": 612,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Valid Palindrome",
@@ -47,7 +59,10 @@
     "difficulty": "Easy",
     "timeExpected": "15 mins",
     "completionDate": "2024-08-08T19:15:24.880Z",
-    "timeTaken": 256
+    "timeTaken": 256,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Invert Binary Tree",
@@ -57,7 +72,10 @@
     "difficulty": "Easy",
     "timeExpected": "15 mins",
     "completionDate": "2024-08-08T19:18:11.250Z",
-    "timeTaken": 101
+    "timeTaken": 101,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Valid Anagram",
@@ -67,7 +85,10 @@
     "difficulty": "Easy",
     "timeExpected": "15 mins",
     "completionDate": "2024-08-08T19:22:56.285Z",
-    "timeTaken": 208
+    "timeTaken": 208,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Binary Search",
@@ -77,7 +98,10 @@
     "difficulty": "Easy",
     "timeExpected": "15 mins",
     "completionDate": "2024-08-08T19:30:01.671Z",
-    "timeTaken": 370
+    "timeTaken": 370,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Flood Fill",
@@ -87,290 +111,431 @@
     "difficulty": "Easy",
     "timeExpected": "20 mins",
     "completionDate": "2024-08-08T19:39:00.401Z",
-    "timeTaken": 475
+    "timeTaken": 475,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Lowest Common Ancestor of a Binary Search Tree",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree",
     "category": "Binary Search Tree",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
-    "attempts": 1,
-    "reviewScheduled": "2024-08-10T00:52:44.817Z",
-    "failDesc": "I didn't pay attention to the problem description!! It was very important to notice that it was a BST, not just an unsorted binary tree"
+    "completionDate": "2024-08-09T15:13:36.390Z",
+    "timeTaken": 284,
+    "attempts": 2,
+    "reviewScheduled": null,
+    "observations": [
+      "I didn't pay attention to the problem description!! It was very important to notice that it was a BST, not just an unsorted binary tree",
+      "repeat after failure. still stumbled because of lack of edge case handling. REMEMBER TO HANDLE EDGE CASES AND BASE CASES"
+    ]
   },
   {
     "name": "Balanced Binary Tree",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/balanced-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T15:21:07.712Z",
+    "timeTaken": 338,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "nice job!"
+    ]
   },
   {
     "name": "Linked List Cycle",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/linked-list-cycle",
     "category": "Linked List",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T15:27:53.687Z",
+    "timeTaken": 222,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-12T15:27:55.749Z",
+    "observations": [
+      "a classic. seen it before"
+    ]
   },
   {
     "name": "Implement Queue using Stacks",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/implement-queue-using-stacks",
     "category": "Stack",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T15:43:12.437Z",
+    "timeTaken": 360,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-12T15:43:17.558Z",
+    "observations": [
+      "struggled on the follow-up, had to look it up. amortization can basically happen when we can reduce an O(n) action to only happening one in every n times. Here, we could push off each shift-reset to only happening when the back stack is empty."
+    ]
   },
   {
     "name": "First Bad Version",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/first-bad-version",
     "category": "Binary Search",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T15:58:28.308Z",
+    "timeTaken": 484,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-12T15:58:35.724Z",
+    "observations": [
+      "binary search, ez. took longer because of a child coming to talk to me at the climbing gym. MAKE SURE TO CHECK YOUR LOGIC! failed at first due to forgetting to flip a boolean."
+    ]
   },
   {
     "name": "Ransom Note",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/ransom-note",
     "category": "Hash Table",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T16:03:13.014Z",
+    "timeTaken": 227,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "nice job. variation on anagram problem"
+    ]
   },
   {
     "name": "Climbing Stairs",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/climbing-stairs",
     "category": "Dynamic Programming",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T16:19:52.834Z",
+    "timeTaken": 510,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-10T16:19:55.503Z",
+    "observations": [
+      "don't be afraid to go for a recursive solution. wasted time overcomplicating it trying to find some kind of clever mathematic formula. remember to try the obvious solution first unless there is a solid reason not to (like knowing its ridiculously slow or you're given a time constraint that it doesn't meet)"
+    ]
   },
   {
     "name": "Longest Palindrome",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/longest-palindrome",
     "category": "String",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T16:55:38.623Z",
+    "timeTaken": 312,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "nice job. pretty straight-forward"
+    ]
   },
   {
     "name": "Reverse Linked List",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/reverse-linked-list",
     "category": "Linked List",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T17:00:55.573Z",
+    "timeTaken": 224,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-10T17:00:57.213Z",
+    "observations": [
+      "classic. nice job"
+    ]
   },
   {
     "name": "Majority Element",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/majority-element",
     "category": "Array",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T17:09:38.512Z",
+    "timeTaken": 253,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-12T17:09:43.795Z",
+    "observations": [
+      "nice job"
+    ]
   },
   {
     "name": "Add Binary",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/add-binary",
     "category": "Binary",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-09T23:21:05.853Z",
+    "timeTaken": 1098,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "struggled with the logic. mainly because i didn't whiteboard it first. ALWAYS WHITEBOARD IF THERES ADVANCED LOGIC!"
+    ]
   },
   {
     "name": "Diameter of Binary Tree",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/diameter-of-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
     "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T03:24:56.389Z",
+    "timeTaken": 438,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-11T03:25:01.314Z",
+    "observations": [
+      "overcomplicated the params/return on the recursive dfs search. you don't need to pass down depth, you can instead pass it up by adding 1 to the return."
+    ]
   },
   {
     "name": "Middle of the Linked List",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/middle-of-the-linked-list",
     "category": "Linked List",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T03:31:42.130Z",
+    "timeTaken": 176,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "nice. thanks algo design! 2 pointer solutions for linked lists always seem so clever..."
+    ]
   },
   {
     "name": "Maximum Depth of Binary Tree",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T03:34:44.367Z",
+    "timeTaken": 67,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "i mean come on. this was an easy one. why would they put this one after diameter of binary tree?"
+    ]
   },
   {
     "name": "Contains Duplicate",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/contains-duplicate",
     "category": "Array",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T03:44:51.004Z",
+    "timeTaken": 64,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "simple"
+    ]
   },
   {
     "name": "Meeting Rooms",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/meeting-rooms",
     "category": "Array",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T03:53:05.447Z",
+    "timeTaken": 249,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "nice. and HA! I figured out my own way to get around the locked problem pay wall. Run with your own tests, time yourself, and look up the problem online."
+    ]
   },
   {
     "name": "Roman to Integer",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/roman-to-integer",
     "category": "Math",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T04:05:29.253Z",
+    "timeTaken": 589,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-15T04:05:35.290Z",
+    "observations": [
+      "you fool! you had a good solution but then you dropped it because you didn't find a simple logical error. subtracted 1*val when it shouldve been 2*val. BE MORE SOUND ABOUT YOUR LOGIC NEXT TIME"
+    ]
   },
   {
     "name": "Backspace String Compare",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/backspace-string-compare",
     "category": "Stack",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T04:11:07.909Z",
+    "timeTaken": 238,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-15T04:11:11.176Z",
+    "observations": [
+      "seen it before and yet STILL!! ITS >= WHEN APPROACHING 0 FROM RIGHT"
+    ]
   },
   {
     "name": "Counting Bits",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/counting-bits",
     "category": "Binary",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T04:18:13.925Z",
+    "timeTaken": 289,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-11T04:18:22.790Z",
+    "observations": [
+      "completed with suboptimal solution. the trick was: GET CLEVER ABOUT INDEXING!! if you're indexing by number it doesn't necessarily have to be a simple +1 or -1 translation of i for accessing other values"
+    ]
   },
   {
     "name": "Same Tree",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/same-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T04:24:16.591Z",
+    "timeTaken": 133,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "pretty simple. recursive solution good enough"
+    ]
   },
   {
     "name": "Number of 1 Bits",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/number-of-1-bits",
     "category": "Binary",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T04:29:17.584Z",
+    "timeTaken": 40,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "come on, why is this one after \"counting bits\"? this order is odd.."
+    ]
   },
   {
     "name": "Longest Common Prefix",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/longest-common-prefix",
     "category": "String",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T04:38:19.092Z",
+    "timeTaken": 320,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "WATCH you can be CLEVER with saving space sometimes if your result directly depends on the index. i.e. a prefix need not to be tracked in array."
+    ]
   },
   {
     "name": "Single Number",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/single-number",
     "category": "Binary",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T04:51:44.956Z",
+    "timeTaken": 432,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-11T04:51:46.295Z",
+    "observations": [
+      "your solution was unique and hacky, but a clever solution was producable via XOR. TAKEAWAY: Keep bitwise operations in mind!!"
+    ]
   },
   {
     "name": "Palindrome Linked List",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/palindrome-linked-list",
     "category": "Linked List",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T05:08:00.452Z",
+    "timeTaken": 813,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-13T05:08:07.526Z",
+    "observations": [
+      "just be careful and methodical on your logic. don't rush so much when implementing careful logic"
+    ]
   },
   {
     "name": "Move Zeroes",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/move-zeroes",
     "category": "Array",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T05:22:55.446Z",
+    "timeTaken": 604,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-11T05:23:05.516Z",
+    "observations": [
+      "decent solution, but there was something simpler. i guess be more intentional about making initial observations on potential rules that happen from the desried manipulation. manipulation can also be simplified"
+    ]
   },
   {
     "name": "Symmetric Tree",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/symmetric-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
     "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T05:29:43.364Z",
+    "timeTaken": 262,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "I think your solution is fine. good even. but there are other ways of doing it"
+    ]
   },
   {
     "name": "Missing Number",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/missing-number",
     "category": "Binary",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T15:46:38.483Z",
+    "timeTaken": 177,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-15T15:46:42.557Z",
+    "observations": [
+      "fun! clever math solution"
+    ]
   },
   {
     "name": "Palindrome Number",
-    "isComplete": false,
+    "isComplete": true,
     "url": "https://leetcode.com/problems/palindrome-number",
     "category": "Math",
     "difficulty": "Easy",
     "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null
+    "completionDate": "2024-08-10T15:53:59.796Z",
+    "timeTaken": 177,
+    "attempts": 1,
+    "reviewScheduled": null,
+    "observations": [
+      "simple"
+    ]
   },
   {
     "name": "Convert Sorted Array to Binary Search Tree",
@@ -380,7 +545,12 @@
     "difficulty": "Easy",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 1,
+    "reviewScheduled": "2024-08-11T16:20:31.937Z",
+    "observations": [
+      "ugh. you were on the right track you just had logical errors. DO NOT BE AFRAID TO USE RECURSION WHEN DEALING WITH TREES FOR GOODNESS SAKE"
+    ]
   },
   {
     "name": "Reverse Bits",
@@ -390,7 +560,10 @@
     "difficulty": "Easy",
     "timeExpected": "15 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Subtree of Another Tree",
@@ -400,7 +573,10 @@
     "difficulty": "Easy",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Squares of a Sorted Array",
@@ -410,7 +586,10 @@
     "difficulty": "Easy",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Maximum Subarray",
@@ -420,7 +599,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Insert Interval",
@@ -430,7 +612,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "01 Matrix",
@@ -440,7 +625,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "K Closest Points to Origin",
@@ -450,7 +638,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Longest Substring Without Repeating Characters",
@@ -460,7 +651,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "3Sum",
@@ -470,7 +664,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Binary Tree Level Order Traversal",
@@ -480,7 +677,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Clone Graph",
@@ -490,7 +690,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Evaluate Reverse Polish Notation",
@@ -500,7 +703,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Course Schedule",
@@ -510,7 +716,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Implement Trie (Prefix Tree)",
@@ -520,7 +729,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Coin Change",
@@ -530,7 +742,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Product of Array Except Self",
@@ -540,7 +755,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Min Stack",
@@ -550,7 +768,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Validate Binary Search Tree",
@@ -560,7 +781,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Number of Islands",
@@ -570,7 +794,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Rotting Oranges",
@@ -580,7 +807,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Search in Rotated Sorted Array",
@@ -590,7 +820,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Combination Sum",
@@ -600,7 +833,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Permutations",
@@ -610,7 +846,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Merge Intervals",
@@ -620,7 +859,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Lowest Common Ancestor of a Binary Tree",
@@ -630,7 +872,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Time Based Key-Value Store",
@@ -640,7 +885,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Accounts Merge",
@@ -650,7 +898,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Sort Colors",
@@ -660,7 +911,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Word Break",
@@ -670,7 +924,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Partition Equal Subset Sum",
@@ -680,7 +937,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "String to Integer (atoi)",
@@ -690,7 +950,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Spiral Matrix",
@@ -700,7 +963,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Subsets",
@@ -710,7 +976,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Binary Tree Right Side View",
@@ -720,7 +989,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Longest Palindromic Substring",
@@ -730,7 +1002,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Unique Paths",
@@ -740,7 +1015,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Construct Binary Tree from Preorder and Inorder Traversal",
@@ -750,7 +1028,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Container With Most Water",
@@ -760,7 +1041,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Letter Combinations of a Phone Number",
@@ -770,7 +1054,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Word Search",
@@ -780,7 +1067,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Find All Anagrams in a String",
@@ -790,7 +1080,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Minimum Height Trees",
@@ -800,7 +1093,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Task Scheduler",
@@ -810,7 +1106,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "LRU Cache",
@@ -820,7 +1119,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Kth Smallest Element in a BST",
@@ -830,7 +1132,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Daily Temperatures",
@@ -840,7 +1145,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "House Robber",
@@ -850,7 +1158,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Gas Station",
@@ -860,7 +1171,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Next Permutation",
@@ -870,7 +1184,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Valid Sudoku",
@@ -880,7 +1197,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Group Anagrams",
@@ -890,7 +1210,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Maximum Product Subarray",
@@ -900,7 +1223,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Design Add and Search Words Data Structure",
@@ -910,7 +1236,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Pacific Atlantic Water Flow",
@@ -920,7 +1249,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Remove Nth Node From End of List",
@@ -930,7 +1262,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Shortest Path to Get Food",
@@ -940,7 +1275,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Find the Duplicate Number",
@@ -950,7 +1288,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Top K Frequent Words",
@@ -960,7 +1301,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Longest Increasing Subsequence",
@@ -970,7 +1314,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Graph Valid Tree",
@@ -980,7 +1327,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Course Schedule II",
@@ -990,7 +1340,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Swap Nodes in Pairs",
@@ -1000,7 +1353,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Path Sum II",
@@ -1010,7 +1366,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Longest Consecutive Sequence",
@@ -1020,7 +1379,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Rotate Array",
@@ -1030,7 +1392,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Odd Even Linked List",
@@ -1040,7 +1405,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Decode String",
@@ -1050,7 +1418,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Contiguous Array",
@@ -1060,7 +1431,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Maximum Width of Binary Tree",
@@ -1070,7 +1444,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Find K Closest Elements",
@@ -1080,7 +1457,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Longest Repeating Character Replacement",
@@ -1090,7 +1470,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Inorder Successor in BST",
@@ -1100,7 +1483,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Jump Game",
@@ -1110,7 +1496,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Add Two Numbers",
@@ -1120,7 +1509,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Generate Parentheses",
@@ -1130,7 +1522,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Sort List",
@@ -1140,7 +1535,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Number of Connected Components in an Undirected Graph",
@@ -1150,7 +1548,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Minimum Knight Moves",
@@ -1160,7 +1561,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Subarray Sum Equals K",
@@ -1170,7 +1574,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Asteroid Collision",
@@ -1180,7 +1587,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Random Pick with Weight",
@@ -1190,7 +1600,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Kth Largest Element in an Array",
@@ -1200,7 +1613,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Maximal Square",
@@ -1210,7 +1626,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Rotate Image",
@@ -1220,7 +1639,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Binary Tree Zigzag Level Order Traversal",
@@ -1230,7 +1652,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Design Hit Counter",
@@ -1240,7 +1665,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Path Sum III",
@@ -1250,7 +1678,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Pow(x, n)",
@@ -1260,7 +1691,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Search a 2D Matrix",
@@ -1270,7 +1704,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Largest Number",
@@ -1280,7 +1717,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Decode Ways",
@@ -1290,7 +1730,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Meeting Rooms II",
@@ -1300,7 +1743,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Reverse Integer",
@@ -1310,7 +1756,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Set Matrix Zeroes",
@@ -1320,7 +1769,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Reorder List",
@@ -1330,7 +1782,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Encode and Decode Strings",
@@ -1340,7 +1795,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Cheapest Flights Within K Stops",
@@ -1350,7 +1808,10 @@
     "difficulty": "Medium",
     "timeExpected": "45 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "All Nodes Distance K in Binary Tree",
@@ -1360,7 +1821,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "3Sum Closest",
@@ -1370,7 +1834,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Rotate List",
@@ -1380,7 +1847,10 @@
     "difficulty": "Medium",
     "timeExpected": "25 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Find Minimum in Rotated Sorted Array",
@@ -1390,7 +1860,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Basic Calculator II",
@@ -1400,7 +1873,10 @@
     "difficulty": "Medium",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Combination Sum IV",
@@ -1410,7 +1886,10 @@
     "difficulty": "Medium",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Insert Delete GetRandom O(1)",
@@ -1420,7 +1899,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Non-overlapping Intervals",
@@ -1430,7 +1912,10 @@
     "difficulty": "Medium",
     "timeExpected": "20 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Minimum Window Substring",
@@ -1440,7 +1925,10 @@
     "difficulty": "Hard",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Serialize and Deserialize Binary Tree",
@@ -1450,7 +1938,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Trapping Rain Water",
@@ -1460,7 +1951,10 @@
     "difficulty": "Hard",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Find Median from Data Stream",
@@ -1470,7 +1964,10 @@
     "difficulty": "Hard",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Word Ladder",
@@ -1480,7 +1977,10 @@
     "difficulty": "Hard",
     "timeExpected": "45 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Basic Calculator",
@@ -1490,7 +1990,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Maximum Profit in Job Scheduling",
@@ -1500,7 +2003,10 @@
     "difficulty": "Hard",
     "timeExpected": "45 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Merge k Sorted Lists",
@@ -1510,7 +2016,10 @@
     "difficulty": "Hard",
     "timeExpected": "30 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Largest Rectangle in Histogram",
@@ -1520,7 +2029,10 @@
     "difficulty": "Hard",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Binary Tree Maximum Path Sum",
@@ -1530,7 +2042,10 @@
     "difficulty": "Hard",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Maximum Frequency Stack",
@@ -1540,7 +2055,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Median of Two Sorted Arrays",
@@ -1550,7 +2068,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Longest Increasing Path in a Matrix",
@@ -1560,7 +2081,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Longest Valid Parentheses",
@@ -1570,7 +2094,10 @@
     "difficulty": "Hard",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Design In-Memory File System",
@@ -1580,7 +2107,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Employee Free Time",
@@ -1590,7 +2120,10 @@
     "difficulty": "Hard",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Word Search II",
@@ -1600,7 +2133,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Alien Dictionary",
@@ -1610,7 +2146,10 @@
     "difficulty": "Hard",
     "timeExpected": "45 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Bus Routes",
@@ -1620,7 +2159,10 @@
     "difficulty": "Hard",
     "timeExpected": "45 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Sliding Window Maximum",
@@ -1630,7 +2172,10 @@
     "difficulty": "Hard",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Palindrome Pairs",
@@ -1640,7 +2185,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Reverse Nodes in k-Group",
@@ -1650,7 +2198,10 @@
     "difficulty": "Hard",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Sudoku Solver",
@@ -1660,7 +2211,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "First Missing Positive",
@@ -1670,7 +2224,10 @@
     "difficulty": "Hard",
     "timeExpected": "35 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "N-Queens",
@@ -1680,7 +2237,10 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Smallest Range Covering Elements from K Lists",
@@ -1690,6 +2250,9 @@
     "difficulty": "Hard",
     "timeExpected": "40 mins",
     "completionDate": null,
-    "timeTaken": null
+    "timeTaken": null,
+    "attempts": 0,
+    "reviewScheduled": null,
+    "observations": []
   }
 ]
