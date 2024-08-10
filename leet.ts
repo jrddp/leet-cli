@@ -53,7 +53,7 @@ async function main() {
 type Problem = {
   name: string;
   isComplete: boolean;
-  timeTaken: number | null;
+  timesTaken: number[];
   timeExpected: string;
   completionDate: Date | null;
   url: string;
@@ -169,9 +169,11 @@ async function nextProblem(startIndex = 0) {
     note(chalk.yellow(`Problem marked for review tomorrow.`));
   } else {
     const timeTakenSeconds = parseTimeToSeconds(timeTaken as string);
-    problem.isComplete = true;
-    problem.completionDate = new Date();
-    problem.timeTaken = timeTakenSeconds;
+    if (!problem.isComplete) {
+      problem.isComplete = true;
+      problem.completionDate = new Date();
+    }
+    problem.timesTaken.push(timeTakenSeconds);
 
     const reviewChoice: symbol | "no" | "1" | "3" | "5" = await select({
       message: "Schedule review?",
@@ -262,13 +264,15 @@ ${renderProgressBar(nComplete, nTotal)}\n`);
   const difficultyLevels = ["Easy", "Medium", "Hard"];
   difficultyLevels.forEach(difficulty => {
     const relevantProblems = problems.filter(
-      p => p.difficulty === difficulty && p.isComplete && p.timeTaken && p.timeTaken > 0
+      p => p.difficulty === difficulty && p.isComplete && p.timesTaken.length > 0
     );
     if (relevantProblems.length > 0) {
       const averageTime =
-        relevantProblems.reduce((sum, p) => sum + (p.timeTaken || 0), 0) / relevantProblems.length;
+        relevantProblems.reduce((sum, p) => sum + p.timesTaken[0], 0) / relevantProblems.length;
       output += chalk.cyan(
-        `Average time for ${difficulty} problems: ${formatSecondsToTime(Math.round(averageTime))}\n`
+        `Average first-time completion for ${difficulty} problems: ${formatSecondsToTime(
+          Math.round(averageTime)
+        )}\n`
       );
     } else {
       output += chalk.cyan(`No completed ${difficulty} problems with valid time taken.\n`);
@@ -316,7 +320,7 @@ async function viewRecentlyCompleted() {
         : chalk.red;
 
     const expectedTime = parseExpectedTime(problem.timeExpected);
-    const timeDiff = (problem.timeTaken || 0) - expectedTime;
+    const timeDiff = problem.timesTaken[0] - expectedTime;
     const timeDiffFormatted = formatTimeDifference(timeDiff);
     const timeDiffColor = timeDiff < 0 ? chalk.green : chalk.red;
 
@@ -330,8 +334,14 @@ async function viewRecentlyCompleted() {
       `(${daysSinceCompletion} days ago)`
     )}\n`;
     output += `Completed in ${
-      problem.timeTaken ? formatSecondsToTime(problem.timeTaken) : "0"
+      problem.timesTaken[0] ? formatSecondsToTime(problem.timesTaken[0]) : "0"
     } ${timeDiffColor(`(${timeDiffFormatted})`)}\n`;
+    if (problem.timesTaken.length > 1) {
+      output += `Review times: ${problem.timesTaken
+        .slice(1)
+        .map(t => formatSecondsToTime(t))
+        .join(", ")}\n`;
+    }
     if (problem.observations && problem.observations.length > 0) {
       output += `Observations:\n${problem.observations.map(obs => `- ${obs}`).join("\n")}\n`;
     }

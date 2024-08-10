@@ -29,7 +29,7 @@ type OldProblem = {
 type NewProblem = {
   name: string;
   isComplete: boolean;
-  timeTaken: number | null;
+  timesTaken: number[];
   timeExpected: string;
   completionDate: Date | null;
   url: string;
@@ -44,6 +44,7 @@ function migrateData(oldProblems: OldProblem[]): NewProblem[] {
   return oldProblems.map(oldProblem => {
     const newProblem: NewProblem = {
       ...oldProblem,
+      timesTaken: oldProblem.timeTaken !== null ? [oldProblem.timeTaken] : [],
       attempts: oldProblem.attempts ?? (oldProblem.isComplete ? 1 : 0),
       reviewScheduled: oldProblem.reviewScheduled ?? null,
       observations: [],

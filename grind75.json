@@ -2,12 +2,14 @@
   {
     "name": "Two Sum",
     "isComplete": true,
+    "timesTaken": [
+      120
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-08T18:34:30.114Z",
     "url": "https://leetcode.com/problems/two-sum",
     "category": "Array",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-08T18:34:30.114Z",
-    "timeTaken": 120,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -15,12 +17,14 @@
   {
     "name": "Valid Parentheses",
     "isComplete": true,
+    "timesTaken": [
+      270
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-08T18:34:35.474Z",
     "url": "https://leetcode.com/problems/valid-parentheses",
     "category": "Stack",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-08T18:34:35.474Z",
-    "timeTaken": 270,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -28,12 +32,14 @@
   {
     "name": "Merge Two Sorted Lists",
     "isComplete": true,
+    "timesTaken": [
+      259
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-08T18:55:05.723Z",
     "url": "https://leetcode.com/problems/merge-two-sorted-lists",
     "category": "Linked List",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-08T18:55:05.723Z",
-    "timeTaken": 259,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -41,12 +47,14 @@
   {
     "name": "Best Time to Buy and Sell Stock",
     "isComplete": true,
+    "timesTaken": [
+      612
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-08T19:06:07.843Z",
     "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
     "category": "Array",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-08T19:06:07.843Z",
-    "timeTaken": 612,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -54,12 +62,14 @@
   {
     "name": "Valid Palindrome",
     "isComplete": true,
+    "timesTaken": [
+      256
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-08T19:15:24.880Z",
     "url": "https://leetcode.com/problems/valid-palindrome",
     "category": "String",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-08T19:15:24.880Z",
-    "timeTaken": 256,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -67,12 +77,14 @@
   {
     "name": "Invert Binary Tree",
     "isComplete": true,
+    "timesTaken": [
+      101
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-08T19:18:11.250Z",
     "url": "https://leetcode.com/problems/invert-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-08T19:18:11.250Z",
-    "timeTaken": 101,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -80,12 +92,14 @@
   {
     "name": "Valid Anagram",
     "isComplete": true,
+    "timesTaken": [
+      208
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-08T19:22:56.285Z",
     "url": "https://leetcode.com/problems/valid-anagram",
     "category": "String",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-08T19:22:56.285Z",
-    "timeTaken": 208,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -93,12 +107,14 @@
   {
     "name": "Binary Search",
     "isComplete": true,
+    "timesTaken": [
+      370
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-08T19:30:01.671Z",
     "url": "https://leetcode.com/problems/binary-search",
     "category": "Binary Search",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-08T19:30:01.671Z",
-    "timeTaken": 370,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -106,12 +122,14 @@
   {
     "name": "Flood Fill",
     "isComplete": true,
+    "timesTaken": [
+      475
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-08T19:39:00.401Z",
     "url": "https://leetcode.com/problems/flood-fill",
     "category": "Graph",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-08T19:39:00.401Z",
-    "timeTaken": 475,
     "attempts": 1,
     "reviewScheduled": null,
     "observations": []
@@ -119,448 +137,445 @@
   {
     "name": "Lowest Common Ancestor of a Binary Search Tree",
     "isComplete": true,
+    "timesTaken": [
+      284
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-09T15:13:36.390Z",
     "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree",
     "category": "Binary Search Tree",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-09T15:13:36.390Z",
-    "timeTaken": 284,
     "attempts": 2,
     "reviewScheduled": null,
-    "observations": [
-      "I didn't pay attention to the problem description!! It was very important to notice that it was a BST, not just an unsorted binary tree",
-      "repeat after failure. still stumbled because of lack of edge case handling. REMEMBER TO HANDLE EDGE CASES AND BASE CASES"
-    ]
+    "observations": []
   },
   {
     "name": "Balanced Binary Tree",
     "isComplete": true,
+    "timesTaken": [
+      338
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-09T15:21:07.712Z",
     "url": "https://leetcode.com/problems/balanced-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-09T15:21:07.712Z",
-    "timeTaken": 338,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "nice job!"
-    ]
+    "observations": []
   },
   {
     "name": "Linked List Cycle",
     "isComplete": true,
+    "timesTaken": [
+      222
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-09T15:27:53.687Z",
     "url": "https://leetcode.com/problems/linked-list-cycle",
     "category": "Linked List",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-09T15:27:53.687Z",
-    "timeTaken": 222,
     "attempts": 1,
     "reviewScheduled": "2024-08-12T15:27:55.749Z",
-    "observations": [
-      "a classic. seen it before"
-    ]
+    "observations": []
   },
   {
     "name": "Implement Queue using Stacks",
     "isComplete": true,
+    "timesTaken": [
+      360
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-09T15:43:12.437Z",
     "url": "https://leetcode.com/problems/implement-queue-using-stacks",
     "category": "Stack",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-09T15:43:12.437Z",
-    "timeTaken": 360,
     "attempts": 1,
     "reviewScheduled": "2024-08-12T15:43:17.558Z",
-    "observations": [
-      "struggled on the follow-up, had to look it up. amortization can basically happen when we can reduce an O(n) action to only happening one in every n times. Here, we could push off each shift-reset to only happening when the back stack is empty."
-    ]
+    "observations": []
   },
   {
     "name": "First Bad Version",
     "isComplete": true,
+    "timesTaken": [
+      484
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-09T15:58:28.308Z",
     "url": "https://leetcode.com/problems/first-bad-version",
     "category": "Binary Search",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-09T15:58:28.308Z",
-    "timeTaken": 484,
     "attempts": 1,
     "reviewScheduled": "2024-08-12T15:58:35.724Z",
-    "observations": [
-      "binary search, ez. took longer because of a child coming to talk to me at the climbing gym. MAKE SURE TO CHECK YOUR LOGIC! failed at first due to forgetting to flip a boolean."
-    ]
+    "observations": []
   },
   {
     "name": "Ransom Note",
     "isComplete": true,
+    "timesTaken": [
+      227
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-09T16:03:13.014Z",
     "url": "https://leetcode.com/problems/ransom-note",
     "category": "Hash Table",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-09T16:03:13.014Z",
-    "timeTaken": 227,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "nice job. variation on anagram problem"
-    ]
+    "observations": []
   },
   {
     "name": "Climbing Stairs",
     "isComplete": true,
+    "timesTaken": [
+      510
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-09T16:19:52.834Z",
     "url": "https://leetcode.com/problems/climbing-stairs",
     "category": "Dynamic Programming",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-09T16:19:52.834Z",
-    "timeTaken": 510,
-    "attempts": 1,
-    "reviewScheduled": "2024-08-10T16:19:55.503Z",
-    "observations": [
-      "don't be afraid to go for a recursive solution. wasted time overcomplicating it trying to find some kind of clever mathematic formula. remember to try the obvious solution first unless there is a solid reason not to (like knowing its ridiculously slow or you're given a time constraint that it doesn't meet)"
-    ]
+    "attempts": 2,
+    "reviewScheduled": null,
+    "observations": []
   },
   {
     "name": "Longest Palindrome",
     "isComplete": true,
+    "timesTaken": [
+      312
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-09T16:55:38.623Z",
     "url": "https://leetcode.com/problems/longest-palindrome",
     "category": "String",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-09T16:55:38.623Z",
-    "timeTaken": 312,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "nice job. pretty straight-forward"
-    ]
+    "observations": []
   },
   {
     "name": "Reverse Linked List",
     "isComplete": true,
+    "timesTaken": [
+      224
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-09T17:00:55.573Z",
     "url": "https://leetcode.com/problems/reverse-linked-list",
     "category": "Linked List",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-09T17:00:55.573Z",
-    "timeTaken": 224,
     "attempts": 1,
     "reviewScheduled": "2024-08-10T17:00:57.213Z",
-    "observations": [
-      "classic. nice job"
-    ]
+    "observations": []
   },
   {
     "name": "Majority Element",
     "isComplete": true,
+    "timesTaken": [
+      253
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-09T17:09:38.512Z",
     "url": "https://leetcode.com/problems/majority-element",
     "category": "Array",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-09T17:09:38.512Z",
-    "timeTaken": 253,
     "attempts": 1,
     "reviewScheduled": "2024-08-12T17:09:43.795Z",
-    "observations": [
-      "nice job"
-    ]
+    "observations": []
   },
   {
     "name": "Add Binary",
     "isComplete": true,
+    "timesTaken": [
+      1098
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-09T23:21:05.853Z",
     "url": "https://leetcode.com/problems/add-binary",
     "category": "Binary",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-09T23:21:05.853Z",
-    "timeTaken": 1098,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "struggled with the logic. mainly because i didn't whiteboard it first. ALWAYS WHITEBOARD IF THERES ADVANCED LOGIC!"
-    ]
+    "observations": []
   },
   {
     "name": "Diameter of Binary Tree",
     "isComplete": true,
+    "timesTaken": [
+      438
+    ],
+    "timeExpected": "30 mins",
+    "completionDate": "2024-08-10T03:24:56.389Z",
     "url": "https://leetcode.com/problems/diameter-of-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
-    "timeExpected": "30 mins",
-    "completionDate": "2024-08-10T03:24:56.389Z",
-    "timeTaken": 438,
     "attempts": 1,
     "reviewScheduled": "2024-08-11T03:25:01.314Z",
-    "observations": [
-      "overcomplicated the params/return on the recursive dfs search. you don't need to pass down depth, you can instead pass it up by adding 1 to the return."
-    ]
+    "observations": []
   },
   {
     "name": "Middle of the Linked List",
     "isComplete": true,
+    "timesTaken": [
+      176
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-10T03:31:42.130Z",
     "url": "https://leetcode.com/problems/middle-of-the-linked-list",
     "category": "Linked List",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-10T03:31:42.130Z",
-    "timeTaken": 176,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "nice. thanks algo design! 2 pointer solutions for linked lists always seem so clever..."
-    ]
+    "observations": []
   },
   {
     "name": "Maximum Depth of Binary Tree",
     "isComplete": true,
+    "timesTaken": [
+      67
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-10T03:34:44.367Z",
     "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-10T03:34:44.367Z",
-    "timeTaken": 67,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "i mean come on. this was an easy one. why would they put this one after diameter of binary tree?"
-    ]
+    "observations": []
   },
   {
     "name": "Contains Duplicate",
     "isComplete": true,
+    "timesTaken": [
+      64
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-10T03:44:51.004Z",
     "url": "https://leetcode.com/problems/contains-duplicate",
     "category": "Array",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-10T03:44:51.004Z",
-    "timeTaken": 64,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "simple"
-    ]
+    "observations": []
   },
   {
     "name": "Meeting Rooms",
     "isComplete": true,
+    "timesTaken": [
+      249
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-10T03:53:05.447Z",
     "url": "https://leetcode.com/problems/meeting-rooms",
     "category": "Array",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-10T03:53:05.447Z",
-    "timeTaken": 249,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "nice. and HA! I figured out my own way to get around the locked problem pay wall. Run with your own tests, time yourself, and look up the problem online."
-    ]
+    "observations": []
   },
   {
     "name": "Roman to Integer",
     "isComplete": true,
+    "timesTaken": [
+      589
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-10T04:05:29.253Z",
     "url": "https://leetcode.com/problems/roman-to-integer",
     "category": "Math",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-10T04:05:29.253Z",
-    "timeTaken": 589,
     "attempts": 1,
     "reviewScheduled": "2024-08-15T04:05:35.290Z",
-    "observations": [
-      "you fool! you had a good solution but then you dropped it because you didn't find a simple logical error. subtracted 1*val when it shouldve been 2*val. BE MORE SOUND ABOUT YOUR LOGIC NEXT TIME"
-    ]
+    "observations": []
   },
   {
     "name": "Backspace String Compare",
     "isComplete": true,
+    "timesTaken": [
+      238
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-10T04:11:07.909Z",
     "url": "https://leetcode.com/problems/backspace-string-compare",
     "category": "Stack",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-10T04:11:07.909Z",
-    "timeTaken": 238,
     "attempts": 1,
     "reviewScheduled": "2024-08-15T04:11:11.176Z",
-    "observations": [
-      "seen it before and yet STILL!! ITS >= WHEN APPROACHING 0 FROM RIGHT"
-    ]
+    "observations": []
   },
   {
     "name": "Counting Bits",
     "isComplete": true,
+    "timesTaken": [
+      289
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-10T04:18:13.925Z",
     "url": "https://leetcode.com/problems/counting-bits",
     "category": "Binary",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-10T04:18:13.925Z",
-    "timeTaken": 289,
     "attempts": 1,
     "reviewScheduled": "2024-08-11T04:18:22.790Z",
-    "observations": [
-      "completed with suboptimal solution. the trick was: GET CLEVER ABOUT INDEXING!! if you're indexing by number it doesn't necessarily have to be a simple +1 or -1 translation of i for accessing other values"
-    ]
+    "observations": []
   },
   {
     "name": "Same Tree",
     "isComplete": true,
+    "timesTaken": [
+      133
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-10T04:24:16.591Z",
     "url": "https://leetcode.com/problems/same-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-10T04:24:16.591Z",
-    "timeTaken": 133,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "pretty simple. recursive solution good enough"
-    ]
+    "observations": []
   },
   {
     "name": "Number of 1 Bits",
     "isComplete": true,
+    "timesTaken": [
+      40
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-10T04:29:17.584Z",
     "url": "https://leetcode.com/problems/number-of-1-bits",
     "category": "Binary",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-10T04:29:17.584Z",
-    "timeTaken": 40,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "come on, why is this one after \"counting bits\"? this order is odd.."
-    ]
+    "observations": []
   },
   {
     "name": "Longest Common Prefix",
     "isComplete": true,
+    "timesTaken": [
+      320
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-10T04:38:19.092Z",
     "url": "https://leetcode.com/problems/longest-common-prefix",
     "category": "String",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-10T04:38:19.092Z",
-    "timeTaken": 320,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "WATCH you can be CLEVER with saving space sometimes if your result directly depends on the index. i.e. a prefix need not to be tracked in array."
-    ]
+    "observations": []
   },
   {
     "name": "Single Number",
     "isComplete": true,
+    "timesTaken": [
+      432
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-10T04:51:44.956Z",
     "url": "https://leetcode.com/problems/single-number",
     "category": "Binary",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-10T04:51:44.956Z",
-    "timeTaken": 432,
     "attempts": 1,
     "reviewScheduled": "2024-08-11T04:51:46.295Z",
-    "observations": [
-      "your solution was unique and hacky, but a clever solution was producable via XOR. TAKEAWAY: Keep bitwise operations in mind!!"
-    ]
+    "observations": []
   },
   {
     "name": "Palindrome Linked List",
     "isComplete": true,
+    "timesTaken": [
+      813
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-10T05:08:00.452Z",
     "url": "https://leetcode.com/problems/palindrome-linked-list",
     "category": "Linked List",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-10T05:08:00.452Z",
-    "timeTaken": 813,
     "attempts": 1,
     "reviewScheduled": "2024-08-13T05:08:07.526Z",
-    "observations": [
-      "just be careful and methodical on your logic. don't rush so much when implementing careful logic"
-    ]
+    "observations": []
   },
   {
     "name": "Move Zeroes",
     "isComplete": true,
+    "timesTaken": [
+      604
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-10T05:22:55.446Z",
     "url": "https://leetcode.com/problems/move-zeroes",
     "category": "Array",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-10T05:22:55.446Z",
-    "timeTaken": 604,
     "attempts": 1,
     "reviewScheduled": "2024-08-11T05:23:05.516Z",
-    "observations": [
-      "decent solution, but there was something simpler. i guess be more intentional about making initial observations on potential rules that happen from the desried manipulation. manipulation can also be simplified"
-    ]
+    "observations": []
   },
   {
     "name": "Symmetric Tree",
     "isComplete": true,
+    "timesTaken": [
+      262
+    ],
+    "timeExpected": "20 mins",
+    "completionDate": "2024-08-10T05:29:43.364Z",
     "url": "https://leetcode.com/problems/symmetric-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": "2024-08-10T05:29:43.364Z",
-    "timeTaken": 262,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "I think your solution is fine. good even. but there are other ways of doing it"
-    ]
+    "observations": []
   },
   {
     "name": "Missing Number",
     "isComplete": true,
+    "timesTaken": [
+      177
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-10T15:46:38.483Z",
     "url": "https://leetcode.com/problems/missing-number",
     "category": "Binary",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-10T15:46:38.483Z",
-    "timeTaken": 177,
     "attempts": 1,
     "reviewScheduled": "2024-08-15T15:46:42.557Z",
-    "observations": [
-      "fun! clever math solution"
-    ]
+    "observations": []
   },
   {
     "name": "Palindrome Number",
     "isComplete": true,
+    "timesTaken": [
+      177
+    ],
+    "timeExpected": "15 mins",
+    "completionDate": "2024-08-10T15:53:59.796Z",
     "url": "https://leetcode.com/problems/palindrome-number",
     "category": "Math",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": "2024-08-10T15:53:59.796Z",
-    "timeTaken": 177,
     "attempts": 1,
     "reviewScheduled": null,
-    "observations": [
-      "simple"
-    ]
+    "observations": []
   },
   {
     "name": "Convert Sorted Array to Binary Search Tree",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree",
     "category": "Binary Search Tree",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 1,
     "reviewScheduled": "2024-08-11T16:20:31.937Z",
-    "observations": [
-      "ugh. you were on the right track you just had logical errors. DO NOT BE AFRAID TO USE RECURSION WHEN DEALING WITH TREES FOR GOODNESS SAKE"
-    ]
+    "observations": []
   },
   {
     "name": "Reverse Bits",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "15 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/reverse-bits",
     "category": "Binary",
     "difficulty": "Easy",
-    "timeExpected": "15 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -568,12 +583,12 @@
   {
     "name": "Subtree of Another Tree",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/subtree-of-another-tree",
     "category": "Binary Tree",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -581,12 +596,12 @@
   {
     "name": "Squares of a Sorted Array",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/squares-of-a-sorted-array",
     "category": "Array",
     "difficulty": "Easy",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -594,12 +609,12 @@
   {
     "name": "Maximum Subarray",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/maximum-subarray",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -607,12 +622,12 @@
   {
     "name": "Insert Interval",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/insert-interval",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -620,12 +635,12 @@
   {
     "name": "01 Matrix",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/01-matrix",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -633,12 +648,12 @@
   {
     "name": "K Closest Points to Origin",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/k-closest-points-to-origin",
     "category": "Heap",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -646,12 +661,12 @@
   {
     "name": "Longest Substring Without Repeating Characters",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters",
     "category": "String",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -659,12 +674,12 @@
   {
     "name": "3Sum",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/3sum",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -672,12 +687,12 @@
   {
     "name": "Binary Tree Level Order Traversal",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/binary-tree-level-order-traversal",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -685,12 +700,12 @@
   {
     "name": "Clone Graph",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/clone-graph",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -698,12 +713,12 @@
   {
     "name": "Evaluate Reverse Polish Notation",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation",
     "category": "Stack",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -711,12 +726,12 @@
   {
     "name": "Course Schedule",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/course-schedule",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -724,12 +739,12 @@
   {
     "name": "Implement Trie (Prefix Tree)",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/implement-trie-prefix-tree",
     "category": "Trie",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -737,12 +752,12 @@
   {
     "name": "Coin Change",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/coin-change",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -750,12 +765,12 @@
   {
     "name": "Product of Array Except Self",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/product-of-array-except-self",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -763,12 +778,12 @@
   {
     "name": "Min Stack",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/min-stack",
     "category": "Stack",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -776,12 +791,12 @@
   {
     "name": "Validate Binary Search Tree",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/validate-binary-search-tree",
     "category": "Binary Search Tree",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -789,12 +804,12 @@
   {
     "name": "Number of Islands",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/number-of-islands",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -802,12 +817,12 @@
   {
     "name": "Rotting Oranges",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/rotting-oranges",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -815,12 +830,12 @@
   {
     "name": "Search in Rotated Sorted Array",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/search-in-rotated-sorted-array",
     "category": "Binary Search",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -828,12 +843,12 @@
   {
     "name": "Combination Sum",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/combination-sum",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -841,12 +856,12 @@
   {
     "name": "Permutations",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/permutations",
     "category": "Recursion",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -854,12 +869,12 @@
   {
     "name": "Merge Intervals",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/merge-intervals",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -867,12 +882,12 @@
   {
     "name": "Lowest Common Ancestor of a Binary Tree",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -880,12 +895,12 @@
   {
     "name": "Time Based Key-Value Store",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/time-based-key-value-store",
     "category": "Binary Search",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -893,12 +908,12 @@
   {
     "name": "Accounts Merge",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/accounts-merge",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -906,12 +921,12 @@
   {
     "name": "Sort Colors",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/sort-colors",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -919,12 +934,12 @@
   {
     "name": "Word Break",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/word-break",
     "category": "Trie",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -932,12 +947,12 @@
   {
     "name": "Partition Equal Subset Sum",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/partition-equal-subset-sum",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -945,12 +960,12 @@
   {
     "name": "String to Integer (atoi)",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/string-to-integer-atoi",
     "category": "String",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -958,12 +973,12 @@
   {
     "name": "Spiral Matrix",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/spiral-matrix",
     "category": "Matrix",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -971,12 +986,12 @@
   {
     "name": "Subsets",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/subsets",
     "category": "Recursion",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -984,12 +999,12 @@
   {
     "name": "Binary Tree Right Side View",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/binary-tree-right-side-view",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -997,12 +1012,12 @@
   {
     "name": "Longest Palindromic Substring",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/longest-palindromic-substring",
     "category": "String",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1010,12 +1025,12 @@
   {
     "name": "Unique Paths",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/unique-paths",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1023,12 +1038,12 @@
   {
     "name": "Construct Binary Tree from Preorder and Inorder Traversal",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1036,12 +1051,12 @@
   {
     "name": "Container With Most Water",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/container-with-most-water",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1049,12 +1064,12 @@
   {
     "name": "Letter Combinations of a Phone Number",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number",
     "category": "Recursion",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1062,12 +1077,12 @@
   {
     "name": "Word Search",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/word-search",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1075,12 +1090,12 @@
   {
     "name": "Find All Anagrams in a String",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string",
     "category": "String",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1088,12 +1103,12 @@
   {
     "name": "Minimum Height Trees",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/minimum-height-trees",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1101,12 +1116,12 @@
   {
     "name": "Task Scheduler",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/task-scheduler",
     "category": "Heap",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1114,12 +1129,12 @@
   {
     "name": "LRU Cache",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/lru-cache",
     "category": "Linked List",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1127,12 +1142,12 @@
   {
     "name": "Kth Smallest Element in a BST",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst",
     "category": "Binary Search Tree",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1140,12 +1155,12 @@
   {
     "name": "Daily Temperatures",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/daily-temperatures",
     "category": "Stack",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1153,12 +1168,12 @@
   {
     "name": "House Robber",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/house-robber",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1166,12 +1181,12 @@
   {
     "name": "Gas Station",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/gas-station",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1179,12 +1194,12 @@
   {
     "name": "Next Permutation",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/next-permutation",
     "category": "Recursion",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1192,12 +1207,12 @@
   {
     "name": "Valid Sudoku",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/valid-sudoku",
     "category": "Matrix",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1205,12 +1220,12 @@
   {
     "name": "Group Anagrams",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/group-anagrams",
     "category": "String",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1218,12 +1233,12 @@
   {
     "name": "Maximum Product Subarray",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/maximum-product-subarray",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1231,12 +1246,12 @@
   {
     "name": "Design Add and Search Words Data Structure",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/design-add-and-search-words-data-structure",
     "category": "Trie",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1244,12 +1259,12 @@
   {
     "name": "Pacific Atlantic Water Flow",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/pacific-atlantic-water-flow",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1257,12 +1272,12 @@
   {
     "name": "Remove Nth Node From End of List",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list",
     "category": "Linked List",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1270,12 +1285,12 @@
   {
     "name": "Shortest Path to Get Food",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/shortest-path-to-get-food",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1283,12 +1298,12 @@
   {
     "name": "Find the Duplicate Number",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/find-the-duplicate-number",
     "category": "Binary",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1296,12 +1311,12 @@
   {
     "name": "Top K Frequent Words",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/top-k-frequent-words",
     "category": "Heap",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1309,12 +1324,12 @@
   {
     "name": "Longest Increasing Subsequence",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/longest-increasing-subsequence",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1322,12 +1337,12 @@
   {
     "name": "Graph Valid Tree",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/graph-valid-tree",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1335,12 +1350,12 @@
   {
     "name": "Course Schedule II",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/course-schedule-ii",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1348,12 +1363,12 @@
   {
     "name": "Swap Nodes in Pairs",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/swap-nodes-in-pairs",
     "category": "Linked List",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1361,12 +1376,12 @@
   {
     "name": "Path Sum II",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/path-sum-ii",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1374,12 +1389,12 @@
   {
     "name": "Longest Consecutive Sequence",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/longest-consecutive-sequence",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1387,12 +1402,12 @@
   {
     "name": "Rotate Array",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/rotate-array",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1400,12 +1415,12 @@
   {
     "name": "Odd Even Linked List",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/odd-even-linked-list",
     "category": "Linked List",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1413,12 +1428,12 @@
   {
     "name": "Decode String",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/decode-string",
     "category": "Stack",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1426,12 +1441,12 @@
   {
     "name": "Contiguous Array",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/contiguous-array",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1439,12 +1454,12 @@
   {
     "name": "Maximum Width of Binary Tree",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/maximum-width-of-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1452,12 +1467,12 @@
   {
     "name": "Find K Closest Elements",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/find-k-closest-elements",
     "category": "Heap",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1465,12 +1480,12 @@
   {
     "name": "Longest Repeating Character Replacement",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/longest-repeating-character-replacement",
     "category": "String",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1478,12 +1493,12 @@
   {
     "name": "Inorder Successor in BST",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/inorder-successor-in-bst",
     "category": "Binary Search Tree",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1491,12 +1506,12 @@
   {
     "name": "Jump Game",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/jump-game",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1504,12 +1519,12 @@
   {
     "name": "Add Two Numbers",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/add-two-numbers",
     "category": "Linked List",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1517,12 +1532,12 @@
   {
     "name": "Generate Parentheses",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/generate-parentheses",
     "category": "Recursion",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1530,12 +1545,12 @@
   {
     "name": "Sort List",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/sort-list",
     "category": "Linked List",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1543,12 +1558,12 @@
   {
     "name": "Number of Connected Components in an Undirected Graph",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1556,12 +1571,12 @@
   {
     "name": "Minimum Knight Moves",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/minimum-knight-moves",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1569,12 +1584,12 @@
   {
     "name": "Subarray Sum Equals K",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/subarray-sum-equals-k",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1582,12 +1597,12 @@
   {
     "name": "Asteroid Collision",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/asteroid-collision",
     "category": "Stack",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1595,12 +1610,12 @@
   {
     "name": "Random Pick with Weight",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/random-pick-with-weight",
     "category": "Math",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1608,12 +1623,12 @@
   {
     "name": "Kth Largest Element in an Array",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/kth-largest-element-in-an-array",
     "category": "Heap",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1621,12 +1636,12 @@
   {
     "name": "Maximal Square",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/maximal-square",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1634,12 +1649,12 @@
   {
     "name": "Rotate Image",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/rotate-image",
     "category": "Matrix",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1647,12 +1662,12 @@
   {
     "name": "Binary Tree Zigzag Level Order Traversal",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1660,12 +1675,12 @@
   {
     "name": "Design Hit Counter",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/design-hit-counter",
     "category": "Queue",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1673,12 +1688,12 @@
   {
     "name": "Path Sum III",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/path-sum-iii",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1686,12 +1701,12 @@
   {
     "name": "Pow(x, n)",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/powx-n",
     "category": "Math",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1699,12 +1714,12 @@
   {
     "name": "Search a 2D Matrix",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/search-a-2d-matrix",
     "category": "Binary Search",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1712,12 +1727,12 @@
   {
     "name": "Largest Number",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/largest-number",
     "category": "String",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1725,12 +1740,12 @@
   {
     "name": "Decode Ways",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/decode-ways",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1738,12 +1753,12 @@
   {
     "name": "Meeting Rooms II",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/meeting-rooms-ii",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1751,12 +1766,12 @@
   {
     "name": "Reverse Integer",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/reverse-integer",
     "category": "Math",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1764,12 +1779,12 @@
   {
     "name": "Set Matrix Zeroes",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/set-matrix-zeroes",
     "category": "Matrix",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1777,12 +1792,12 @@
   {
     "name": "Reorder List",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/reorder-list",
     "category": "Linked List",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1790,12 +1805,12 @@
   {
     "name": "Encode and Decode Strings",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/encode-and-decode-strings",
     "category": "String",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1803,12 +1818,12 @@
   {
     "name": "Cheapest Flights Within K Stops",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "45 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/cheapest-flights-within-k-stops",
     "category": "Graph",
     "difficulty": "Medium",
-    "timeExpected": "45 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1816,12 +1831,12 @@
   {
     "name": "All Nodes Distance K in Binary Tree",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1829,12 +1844,12 @@
   {
     "name": "3Sum Closest",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/3sum-closest",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1842,12 +1857,12 @@
   {
     "name": "Rotate List",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "25 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/rotate-list",
     "category": "Linked List",
     "difficulty": "Medium",
-    "timeExpected": "25 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1855,12 +1870,12 @@
   {
     "name": "Find Minimum in Rotated Sorted Array",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array",
     "category": "Binary Search",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1868,12 +1883,12 @@
   {
     "name": "Basic Calculator II",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/basic-calculator-ii",
     "category": "Stack",
     "difficulty": "Medium",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1881,12 +1896,12 @@
   {
     "name": "Combination Sum IV",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/combination-sum-iv",
     "category": "Dynamic Programming",
     "difficulty": "Medium",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1894,12 +1909,12 @@
   {
     "name": "Insert Delete GetRandom O(1)",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/insert-delete-getrandom-o1",
     "category": "Hash Table",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1907,12 +1922,12 @@
   {
     "name": "Non-overlapping Intervals",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "20 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/non-overlapping-intervals",
     "category": "Array",
     "difficulty": "Medium",
-    "timeExpected": "20 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1920,12 +1935,12 @@
   {
     "name": "Minimum Window Substring",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/minimum-window-substring",
     "category": "String",
     "difficulty": "Hard",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1933,12 +1948,12 @@
   {
     "name": "Serialize and Deserialize Binary Tree",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree",
     "category": "Binary Tree",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1946,12 +1961,12 @@
   {
     "name": "Trapping Rain Water",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/trapping-rain-water",
     "category": "Stack",
     "difficulty": "Hard",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1959,12 +1974,12 @@
   {
     "name": "Find Median from Data Stream",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/find-median-from-data-stream",
     "category": "Heap",
     "difficulty": "Hard",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1972,12 +1987,12 @@
   {
     "name": "Word Ladder",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "45 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/word-ladder",
     "category": "Graph",
     "difficulty": "Hard",
-    "timeExpected": "45 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1985,12 +2000,12 @@
   {
     "name": "Basic Calculator",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/basic-calculator",
     "category": "Stack",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -1998,12 +2013,12 @@
   {
     "name": "Maximum Profit in Job Scheduling",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "45 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/maximum-profit-in-job-scheduling",
     "category": "Binary Search",
     "difficulty": "Hard",
-    "timeExpected": "45 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2011,12 +2026,12 @@
   {
     "name": "Merge k Sorted Lists",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "30 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/merge-k-sorted-lists",
     "category": "Heap",
     "difficulty": "Hard",
-    "timeExpected": "30 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2024,12 +2039,12 @@
   {
     "name": "Largest Rectangle in Histogram",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/largest-rectangle-in-histogram",
     "category": "Stack",
     "difficulty": "Hard",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2037,12 +2052,12 @@
   {
     "name": "Binary Tree Maximum Path Sum",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum",
     "category": "Binary Tree",
     "difficulty": "Hard",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2050,12 +2065,12 @@
   {
     "name": "Maximum Frequency Stack",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/maximum-frequency-stack",
     "category": "Stack",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2063,12 +2078,12 @@
   {
     "name": "Median of Two Sorted Arrays",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/median-of-two-sorted-arrays",
     "category": "Binary Search",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2076,12 +2091,12 @@
   {
     "name": "Longest Increasing Path in a Matrix",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix",
     "category": "Graph",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2089,12 +2104,12 @@
   {
     "name": "Longest Valid Parentheses",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/longest-valid-parentheses",
     "category": "Stack",
     "difficulty": "Hard",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2102,12 +2117,12 @@
   {
     "name": "Design In-Memory File System",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/design-in-memory-file-system",
     "category": "Trie",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2115,12 +2130,12 @@
   {
     "name": "Employee Free Time",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/employee-free-time",
     "category": "Array",
     "difficulty": "Hard",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2128,12 +2143,12 @@
   {
     "name": "Word Search II",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/word-search-ii",
     "category": "Graph",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2141,12 +2156,12 @@
   {
     "name": "Alien Dictionary",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "45 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/alien-dictionary",
     "category": "Graph",
     "difficulty": "Hard",
-    "timeExpected": "45 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2154,12 +2169,12 @@
   {
     "name": "Bus Routes",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "45 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/bus-routes",
     "category": "Graph",
     "difficulty": "Hard",
-    "timeExpected": "45 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2167,12 +2182,12 @@
   {
     "name": "Sliding Window Maximum",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/sliding-window-maximum",
     "category": "Array",
     "difficulty": "Hard",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2180,12 +2195,12 @@
   {
     "name": "Palindrome Pairs",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/palindrome-pairs",
     "category": "String",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2193,12 +2208,12 @@
   {
     "name": "Reverse Nodes in k-Group",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/reverse-nodes-in-k-group",
     "category": "Linked List",
     "difficulty": "Hard",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2206,12 +2221,12 @@
   {
     "name": "Sudoku Solver",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/sudoku-solver",
     "category": "Matrix",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2219,12 +2234,12 @@
   {
     "name": "First Missing Positive",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "35 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/first-missing-positive",
     "category": "Hash Table",
     "difficulty": "Hard",
-    "timeExpected": "35 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2232,12 +2247,12 @@
   {
     "name": "N-Queens",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/n-queens",
     "category": "Recursion",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
@@ -2245,12 +2260,12 @@
   {
     "name": "Smallest Range Covering Elements from K Lists",
     "isComplete": false,
+    "timesTaken": [],
+    "timeExpected": "40 mins",
+    "completionDate": null,
     "url": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists",
     "category": "Heap",
     "difficulty": "Hard",
-    "timeExpected": "40 mins",
-    "completionDate": null,
-    "timeTaken": null,
     "attempts": 0,
     "reviewScheduled": null,
     "observations": []
