@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-import { } from "../dist/index.js";
+import { main } from "../dist/index.js";
+
+main().catch(console.error);
