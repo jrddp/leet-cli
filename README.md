@@ -6,7 +6,7 @@ A default list of the full [Grind75](https://grind75.com/) problems list is prov
 
 Tracks progress, time taken, failures, and reflections.
 
-![Usage GIF](images/usage.gif)
+![Usage GIF](https://github.com/jrddp/leet-cli/raw/main/images/usage.gif)
 
 ## Features
 
