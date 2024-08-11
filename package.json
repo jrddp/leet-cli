@@ -1,7 +1,7 @@
 {
   "name": "leet-cli",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "https://github.com/jrddp/leet-cli",
   "description": "A CLI tool to manage LeetCode problems",
   "keywords": [
