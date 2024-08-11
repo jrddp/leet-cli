@@ -1,6 +1,6 @@
 import { intro, outro, select, isCancel } from "@clack/prompts";
 import chalk from "chalk";
-import { readFileSync } from "fs";
+import { copyFileSync, existsSync, readFileSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { nextProblem } from "./commands/nextProblem.js";
@@ -10,12 +10,18 @@ import { Problem, dateReviver } from "./utils.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const problemsFilePath = path.join(__dirname, "..", "data", "grind75.json");
+const problemsFilePath = path.join(__dirname, "..", "data", "problems.json");
+const templateFilePath = path.join(__dirname, "..", "data", "grind75_template.json");
+
+if (!existsSync(problemsFilePath)) {
+  copyFileSync(templateFilePath, problemsFilePath);
+  console.log(chalk.yellow("Problems file created with Grind75 template."));
+}
 
 export let problems = JSON.parse(readFileSync(problemsFilePath, "utf8"), dateReviver) as Problem[];
 
 async function main() {
-  intro(chalk.bold(chalk.green("Grind75 Manager")));
+  intro(chalk.bold(chalk.green("Welcome to leet-cli!")));
 
   while (true) {
     const options = [
