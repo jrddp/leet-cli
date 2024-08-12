@@ -6,11 +6,10 @@ import { fileURLToPath } from "url";
 import { nextProblem } from "./commands/nextProblem.js";
 import { showProgress } from "./commands/viewProgress.js";
 import { viewRecentlyCompleted } from "./commands/recentlyCompleted.js";
-import { Problem, dateReviver } from "./utils.js";
+import { Problem, dateReviver, problemsFilePath } from "./utils.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const problemsFilePath = path.join(__dirname, "..", "data", "problems.json");
 const templateFilePath = path.join(__dirname, "..", "data", "grind75_template.json");
 
 if (!existsSync(problemsFilePath)) {

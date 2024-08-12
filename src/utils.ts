@@ -1,12 +1,11 @@
 import { writeFileSync } from "fs";
 import { text } from "@clack/prompts";
-import chalk from "chalk";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const problemsFilePath = path.join(__dirname, "..", "data", "grind75.json");
+export const problemsFilePath = path.join(__dirname, "..", "data", "problems.json");
 
 export type Problem = {
   name: string;
